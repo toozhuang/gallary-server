@@ -7,6 +7,11 @@ import { I18nService } from 'nestjs-i18n';
 export class ReadFileService {
   constructor(readonly i18n: I18nService) {}
 
+  /**
+   * 通过预设配置的 string 文件位置来读取该文件夹下面的文件
+   * TODO： 需要考虑递归读取文件直到没有文件夹，然后进行分类读取
+   * @param sourceFolder
+   */
   async readFolder(sourceFolder: string) {
     // 添加位置信息， 读取该文件 path.join(__dirname,xxx)
     const filePath = sourceFolder;
