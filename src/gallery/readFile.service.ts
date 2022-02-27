@@ -16,9 +16,7 @@ export class ReadFileService {
 
       const filesArray = await fs.promises.readdir(filePath);
       // 过滤所有的 json 文件
-      const jsonFiles = filesArray.filter(
-        (item) => path.extname(item) === '.json',
-      );
+      const jsonFiles = filesArray.filter((item) => path.extname(item) === '.json');
       const asrJsonArray = [];
       for (let index = 0; index < jsonFiles.length; index++) {
         const isValid = await this.validateJson(jsonFiles[index], filePath);
@@ -42,10 +40,9 @@ export class ReadFileService {
    * @param filePath
    */
   async validateJson(item: string, filePath: string) {
-    const jsonPath = path.join(filePath, item);
+    // const jsonPath = path.join(filePath, item);
 
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const demo = require(jsonPath);
+    // const demo = require(jsonPath);
 
     return true;
     //
