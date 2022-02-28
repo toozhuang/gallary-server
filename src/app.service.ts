@@ -6,13 +6,15 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import { join } from 'path';
+import { ConfigService } from '@nestjs/config';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { MovieDb } = require('moviedb-promise');
 @Injectable()
 export class AppService {
   private readonly moviedb;
-  constructor() {
-    this.moviedb = new MovieDb('8f54beed88428126789cc1654fe73bf2');
+  constructor(private readonly configService: ConfigService) {
+    const apiKey = this.configService.get('movie.api_key');
+    this.moviedb = new MovieDb(apiKey);
   }
 
   getMovieDb() {
