@@ -10,9 +10,7 @@ export class MoviedbConfigureMiddleware implements NestMiddleware {
       join(process.cwd(), 'json-db/configure.json'),
       'utf8',
     );
-    const configJson = JSON.parse(configuration);
-    req.movieDbConfig = configJson;
-    console.log(configJson);
+    req.movieDbConfig = JSON.parse(configuration);
     next();
   }
 }

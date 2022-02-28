@@ -6,6 +6,8 @@ import { AppService } from '../app.service';
 
 import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
 
+import { XMLParser, XMLBuilder, XMLValidator } from 'fast-xml-parser';
+
 @Module({
   providers: [GalleryService, ReadFileService, AppService],
   controllers: [GalleryController],
