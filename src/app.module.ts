@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { MovieService } from './movie.service';
 import { GalleryModule } from './gallery/gallery.module';
 import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
@@ -24,6 +24,6 @@ import configuration from './config/configuration';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService, ConfigService],
+  providers: [MovieService, ConfigService],
 })
 export class AppModule {}

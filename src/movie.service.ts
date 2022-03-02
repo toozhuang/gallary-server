@@ -7,15 +7,19 @@ import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import { join } from 'path';
 import { ConfigService } from '@nestjs/config';
+import DB, { DBType } from './common/json-db';
 import { XMLParser } from 'fast-xml-parser';
+import { MovieException } from './common/exceptions/movie.exception';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { MovieDb } = require('moviedb-promise');
 @Injectable()
-export class AppService {
+export class MovieService {
   private readonly moviedb;
+  private readonly db: DBType;
   constructor(private readonly configService: ConfigService) {
     const apiKey = this.configService.get('movie.api_key');
     this.moviedb = new MovieDb(apiKey);
+    this.db = DB;
   }
 
   getMovieDb() {
@@ -47,6 +51,27 @@ export class AppService {
           JSON.stringify(value),
         );
       });
+    }
+  }
+
+  /**
+   *  扫描文件夹的电影资源信息， 并将其加入到数据库 json 文件中
+   * @param folder 要扫描的文件夹
+   * @param dbName db 名称
+   * @param dbVersion db 版本
+   */
+  async scannerDb(folder: string, dbName: string, dbVersion: number) {
+    try {
+      const hasDb = await this.db.existDB(dbName, dbVersion);
+      if (hasDb) {
+        //   如果有db 就直接读取
+        const movieDb = await this.db.openDB(dbName, dbVersion);
+        return movieDb;
+      } else {
+        // 创建一个 DB
+      }
+    } catch (e) {
+      throw new MovieException(-4004, 'can not find this folder');
     }
   }
 }
