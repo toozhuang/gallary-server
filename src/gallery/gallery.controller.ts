@@ -1,9 +1,9 @@
-import { Controller, Get, Req } from '@nestjs/common';
+import { Controller, Get, Header, Req } from '@nestjs/common';
 import { ReadFileService } from './readFile.service';
 import { Request } from 'express';
 import { join } from 'path';
 import * as fs from 'fs';
-import { AppService } from '../app.service';
+import { MovieService } from '../movie.service';
 import { XMLParser } from 'fast-xml-parser';
 import * as path from 'path';
 import * as _ from 'lodash';
@@ -12,13 +12,16 @@ import * as _ from 'lodash';
 export class GalleryController {
   constructor(
     private readonly readFileService: ReadFileService,
-    private readonly movieDbService: AppService,
+    private readonly movieDbService: MovieService,
   ) {}
 
   @Get('scanner')
+  @Header('content-type', 'application/json')
   async scannerFolder(folder = '/Volumes/My Passport/非常警探') {
     folder = `/Volumes/My Passport`;
+    return this.movieDbService.scannerDb(folder, 'movie', 1);
     const moviesFolder = await fs.promises.readdir(folder, 'utf8');
+    console.log(moviesFolder);
     //  读取 meta 文件， 并存储到项目数据库
     const jsonDb = await fs.promises.readFile(join(process.cwd(), 'json-db/movie.json'), 'utf8');
     // console.log(jsonDb);
@@ -44,6 +47,9 @@ export class GalleryController {
             );
             const parser = new XMLParser();
             const jObj = parser.parse(XMLdata);
+            // 查看 jsonDB 是否有 该movie 的信息， 如果有， 就不插入， 如果没有就插入
+            // 目前的逻辑是不考虑更新的情况， 即还要考虑如果是更新了， 要怎么操作
+            // 或者说是否可以让人手动更新？
             jsonDbObj.push(jObj.movie);
 
             await fs.promises.writeFile(
