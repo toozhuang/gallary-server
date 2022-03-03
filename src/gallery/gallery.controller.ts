@@ -4,14 +4,13 @@ import { Request } from 'express';
 import { join } from 'path';
 import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
-import { XMLParser } from 'fast-xml-parser';
-import * as path from 'path';
-import * as _ from 'lodash';
+import { GalleryService } from './gallery.service';
 
 @Controller('gallery')
 export class GalleryController {
   constructor(
     private readonly readFileService: ReadFileService,
+    private readonly galleryService: GalleryService,
     private readonly movieDbService: MovieService,
   ) {}
 
@@ -24,6 +23,11 @@ export class GalleryController {
   async scannerFolder(folder = '/Volumes/My Passport/非常警探') {
     folder = `/Volumes/My Passport`;
     return this.movieDbService.scannerDb(folder, 'movie', 1);
+  }
+
+  @Get('all')
+  async galleryAll() {
+    return this.galleryService.allMovies();
   }
 
   @Get()
@@ -49,6 +53,5 @@ export class GalleryController {
       resolve(result);
       reject(result);
     });
-    // return this.readFileService.readFolder('/Users/wang/Documents');
   }
 }

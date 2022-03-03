@@ -38,8 +38,17 @@ interface IFindItemDB {
   (jsonDbObj: any, itemId: string): number;
 }
 
-const CreateDB: ICreateDB = (name = 'movie', version: number) => {
+const CreateDB: ICreateDB = async (name = 'movie', version: number) => {
   //  todo: 判断是否存在这个 DB
+  await fs.promises.writeFile(
+    join(process.cwd(), `json-db/${name}.json`),
+    JSON.stringify({
+      createTime: '03-03-2022',
+      database: [],
+      version,
+    }),
+  );
+  return true;
 };
 
 const ExistDB: IExistDB = async (name: string, version: number) => {
@@ -49,7 +58,7 @@ const ExistDB: IExistDB = async (name: string, version: number) => {
     return true;
   } catch (e) {
     // eslint-disable-next-line no-console
-    console.log(e);
+    // console.log(e);
     throw e;
   }
 };
