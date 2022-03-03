@@ -65,77 +65,75 @@ export class MovieService {
    *  当前的业务逻辑会扫描所有的文件夹， 读取内部的 nfo 文件来确定信息
    *  而对于没有 nfo 的文件，当前的业务逻辑是存到一个 另一个名字叫 other 的json 中
    *  定时的对 other 和 nfo 文件进行比对， 来删除 other 中的文件信息
+   *  NOTE: 既然能sacn 那就要确定是能够scan 才进来的
    * @param folder 要扫描的文件夹
    * @param dbName db 名称
    * @param dbVersion db 版本
    */
   async scannerDb(folder: string, dbName: string, dbVersion: number) {
     try {
-      const hasDb = await this.db.ExistDB(dbName, dbVersion);
-      if (hasDb) {
-        //我们要开始扫描数据， 然后对这个数据库进行增删改查了
+      await this.db.ExistDB(dbName, dbVersion);
+    } catch (e) {
+      await DB.CreateDB('movie', 1);
+    }
 
-        const moviesFolder = await fs.promises.readdir(folder, 'utf8');
+    try {
+      //我们要开始扫描数据， 然后对这个数据库进行增删改查了
+      const moviesFolder = await fs.promises.readdir(folder, 'utf8');
 
-        // return movieDb;
+      // return movieDb;
 
-        // 对用户端的folder 进行扫描，并扫描结果对json文件进行更新
-        for (let index = 0; index < moviesFolder.length; index++) {
-          const movieDb = await this.db.OpenDB(dbName, dbVersion);
-          const movieFolder = moviesFolder[index];
-          try {
-            // 判断该moviesFolder中的movieFolder 是文件 还是是 文件夹
-            const isFolder = fs.lstatSync(path.join(folder, `/${movieFolder}`)).isDirectory();
-            if (isFolder) {
-              // 如果是文件夹， 那么就读取该文件夹中的meta data 信息
-              const movieFolderItemList = await fs.promises.readdir(
-                path.join(folder, `/${movieFolder}`),
-                'utf8',
+      // 对用户端的folder 进行扫描，并扫描结果对json文件进行更新
+      for (let index = 0; index < moviesFolder.length; index++) {
+        const movieDb = await this.db.OpenDB(dbName, dbVersion);
+        const movieFolder = moviesFolder[index];
+        try {
+          // 判断该moviesFolder中的movieFolder 是文件 还是是 文件夹
+          const isFolder = fs.lstatSync(path.join(folder, `/${movieFolder}`)).isDirectory();
+          if (isFolder) {
+            // 如果是文件夹， 那么就读取该文件夹中的meta data 信息
+            const movieFolderItemList = await fs.promises.readdir(
+              path.join(folder, `/${movieFolder}`),
+              'utf8',
+            );
+
+            const extName = movieFolderItemList.map((item) => path.extname(item));
+            const nfoIndex = _.indexOf(extName, '.nfo');
+            if (nfoIndex > 0) {
+              //如果该文件夹中有 nfo meta data 文件
+              const XMLdata = await fs.promises.readFile(
+                join(`${folder}/${movieFolder}/`, movieFolderItemList[nfoIndex]),
               );
+              const parser = new XMLParser();
+              const movieItem: INfometa = parser.parse(XMLdata);
 
-              const extName = movieFolderItemList.map((item) => path.extname(item));
-              const nfoIndex = _.indexOf(extName, '.nfo');
-              if (nfoIndex > 0) {
-                //如果该文件夹中有 nfo meta data 文件
-                const XMLdata = await fs.promises.readFile(
-                  join(`${folder}/${movieFolder}/`, movieFolderItemList[nfoIndex]),
-                );
-                const parser = new XMLParser();
-                const movieItem: INfometa = parser.parse(XMLdata);
-
-                if (DB.FindItem(movieDb, movieItem.movie.id) === -1) {
-                  //  如果当前数据库中不存在这个 id
-                  DB.InsertItem(movieDb, movieItem);
-                  await DB.SaveDB(movieDb);
-                } else {
-                  console.log('已经存在该movie的信息', movieItem.movie.id);
-                }
-
-                // 查看 jsonDB 是否有 该movie 的信息， 如果有， 就不插入， 如果没有就插入
-                // 目前的逻辑是不考虑更新的情况， 即还要考虑如果是更新了， 要怎么操作
-                // 或者说是否可以让人手动更新？
-                // jsonDbObj.push(jObj.movie);
-
-                // await fs.promises.writeFile(
-                //   join(process.cwd(), 'json-db/movie.json'),
-                //   JSON.stringify(jsonDbObj),
-                // );
+              if (DB.FindItem(movieDb, movieItem.movie.id) === -1) {
+                movieItem.movie.location = folder + `/${movieFolder}`;
+                //  如果当前数据库中不存在这个 id
+                DB.InsertItem(movieDb, movieItem);
+                await DB.SaveDB(movieDb);
               } else {
-                // todo: 不包含 meta 文件， 当前情况则跳过
+                // console.log('已经存在该movie的信息', movieItem.movie.id);
               }
             } else {
-              console.log(folder, `/${movieFolder}`, 'is not a folder');
+              // todo: 不包含 meta 文件， 当前情况则跳过
+              //   TODO：后续需要在这里处理， 把这些不包含 meta 的文件 的具体信息写入到 other 中去， 先这样就会有一个other来专门控制
             }
-          } catch (error) {
-            //  是文件夹
-            // console.log('error:', error);
+          } else {
+            console.log(folder, `/${movieFolder}`, 'is not a folder');
           }
+        } catch (error) {
+          //  是文件夹
+          // console.log('error:', error);
         }
-      } else {
-        // 创建一个 DB
       }
+
+      return {
+        status: 1002, // 代表成功
+        message: '扫描完成',
+      };
     } catch (e) {
-      throw new MovieException(-4004, 'can not find this folder');
+      throw new MovieException(-4004, 'init movie db error');
     }
   }
 }

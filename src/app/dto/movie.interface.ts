@@ -45,8 +45,9 @@ export interface MovieClass {
   fileinfo: Fileinfo;
   source: string;
   edition: string;
-  original_filename: string;
+  original_filename: string; // 文件的名称信息
   user_note: string;
+  location?: string; // 该文件在电脑上的位置
 }
 
 export interface Actor {
