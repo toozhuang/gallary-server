@@ -2,11 +2,9 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
 import { GalleryService } from './gallery.service';
 import { GalleryController } from './gallery.controller';
 import { ReadFileService } from './readFile.service';
-import { MovieService } from '../movie.service';
+import { MovieService } from '../app/movie.service';
 
 import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
-
-import { XMLParser, XMLBuilder, XMLValidator } from 'fast-xml-parser';
 
 @Module({
   providers: [GalleryService, ReadFileService, MovieService],
