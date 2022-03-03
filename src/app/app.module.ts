@@ -2,10 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { MovieService } from './movie.service';
-import { GalleryModule } from './gallery/gallery.module';
+import { GalleryModule } from '../gallery/gallery.module';
 import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
-import configuration from './config/configuration';
+import configuration from '../config/configuration';
 
 @Module({
   imports: [
@@ -19,7 +19,7 @@ import configuration from './config/configuration';
       fallbackLanguage: 'cn',
       parser: I18nJsonParser,
       parserOptions: {
-        path: path.join(__dirname, '/i18n/'),
+        path: path.join(__dirname, '../i18n/'),
       },
     }),
   ],
