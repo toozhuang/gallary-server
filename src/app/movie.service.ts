@@ -5,7 +5,7 @@
  */
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import DB, { DBType } from '../common/json-db';
+import DB, { DBType } from '../common/db/json-db';
 
 import { MovieException } from '../common/exceptions/movie.exception';
 import { join } from 'path';

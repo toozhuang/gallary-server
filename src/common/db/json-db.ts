@@ -1,6 +1,7 @@
 import { join } from 'path';
 import * as fs from 'fs';
-import { INfometa } from '../app/dto/movie.interface';
+import { INfometa } from '../../app/dto/movie.interface';
+import { ICreateDB, IExistDB, IFindItemDB, IInsertDB, IOpenDB, ISaveDB } from './dto';
 
 /**
  * date: 2022-03-2, Wed, 21:23
@@ -12,30 +13,6 @@ export interface IMovieDB {
   createTime: string;
   version: number;
   database: any[];
-}
-
-interface IExistDB {
-  (name: string, version: number): Promise<boolean> | any;
-}
-
-interface ICreateDB {
-  (name: string, version: number): void;
-}
-
-interface IOpenDB {
-  (name: string, version: number): Promise<IMovieDB>;
-}
-
-interface ISaveDB {
-  (jsonDbObj: any): void;
-}
-
-interface IInsertDB {
-  (jsonDbObj: any, movieItem: INfometa): void;
-}
-
-interface IFindItemDB {
-  (jsonDbObj: any, itemId: string): number;
 }
 
 const CreateDB: ICreateDB = async (name = 'movie', version: number) => {
@@ -83,7 +60,7 @@ const InsertItem = (dbjson: IMovieDB, item: INfometa) => {
   return dbjson;
 };
 
-const FindItem = (dbjson: IMovieDB, itemId: string) => {
+const FindItem: IFindItemDB = (dbjson: IMovieDB, itemId: string) => {
   const { database: movies } = dbjson;
   const hasItem = -1;
   for (let index = 0; index < movies.length; index++) {

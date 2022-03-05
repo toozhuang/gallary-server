@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import DB, { DBType } from '../common/json-db';
+import DB, { DBType, IMovieDB } from '../common/db/json-db';
 
 @Injectable()
 export class GalleryService {
@@ -11,5 +11,14 @@ export class GalleryService {
   async allMovies() {
     const result = await this.db.OpenDB('movie', 1);
     return result;
+  }
+
+  async getMovieById(id: string): Promise<any | number> {
+    const database: IMovieDB = await this.db.OpenDB('movie', 1);
+    const index = this.db.FindItem(database, id);
+    if (index !== -1) {
+      return database.database[index];
+    }
+    return -1;
   }
 }

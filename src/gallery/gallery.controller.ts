@@ -1,10 +1,11 @@
-import { Controller, Get, Header, Req } from '@nestjs/common';
+import { Controller, Get, Header, Param, Req } from '@nestjs/common';
 import { ReadFileService } from './readFile.service';
 import { Request } from 'express';
 import { join } from 'path';
 import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
 import { GalleryService } from './gallery.service';
+import { MovieException } from '../common/exceptions/movie.exception';
 
 @Controller('gallery')
 export class GalleryController {
@@ -28,6 +29,18 @@ export class GalleryController {
   @Get('all')
   async galleryAll() {
     return this.galleryService.allMovies();
+  }
+
+  @Get(':id')
+  async getgalleryItem(@Param('id') id: string) {
+    const movie = await this.galleryService.getMovieById(id);
+    if (movie === -1) {
+      throw new MovieException(-4001, 'can not find this movie');
+    }
+    return {
+      code: 200,
+      data: movie,
+    };
   }
 
   @Get()
