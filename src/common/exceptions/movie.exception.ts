@@ -7,6 +7,6 @@ import { HttpException, HttpStatus } from '@nestjs/common';
 
 export class MovieException extends HttpException {
   constructor(errorCode: number, errorMsg: string) {
-    super({ errorCode, errorMsg }, HttpStatus.OK);
+    super({ errorCode, errorMsg }, HttpStatus.OK); // STATUS OK 前端通过errocode 和 errormsg 来确定错误内容
   }
 }

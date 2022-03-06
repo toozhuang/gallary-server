@@ -1,3 +1,8 @@
+/**
+ * date: 2022-03-6, Sun, 23:58
+ * author: TooZhun9
+ * feature： 数据库 DTO 描述
+ */
 import { INfometa } from '../../app/dto/movie.interface';
 import { IMovieDB } from './json-db';
 
