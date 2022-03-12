@@ -10,6 +10,7 @@ import configuration from '../config/configuration';
 @Module({
   imports: [
     GalleryModule,
+    //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ['.env.development'], // 替换 '.env.prod'

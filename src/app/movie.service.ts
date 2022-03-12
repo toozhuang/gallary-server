@@ -3,7 +3,7 @@
  * author: TooZhun9
  * feature： 项目启动的时候提供的 injectable 做的一些操作
  */
-import { Injectable } from '@nestjs/common';
+import { Injectable, LoggerService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import DB, { DBType } from '../common/db/json-db';
 
@@ -19,11 +19,16 @@ import { INfometa } from './dto/movie.interface';
 import { noConflict } from 'lodash';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { MovieDb } = require('moviedb-promise');
+
 @Injectable()
 export class MovieService {
   private readonly moviedb;
   private readonly db: DBType;
-  constructor(private readonly configService: ConfigService) {
+
+  constructor(
+    private readonly loggerService: LoggerService,
+    private readonly configService: ConfigService,
+  ) {
     const apiKey = this.configService.get('movie.api_key');
     this.moviedb = new MovieDb(apiKey);
     this.db = DB;
@@ -32,6 +37,7 @@ export class MovieService {
   getMovieDb() {
     return this.moviedb;
   }
+
   // const jsonDb = await fs.promises.readFile(join(process.cwd(), 'json-db/movie.json'), 'utf8');
   // // console.log(jsonDb);
   // const result = JSON.parse(jsonDb);
@@ -121,7 +127,7 @@ export class MovieService {
               //   TODO：后续需要在这里处理， 把这些不包含 meta 的文件 的具体信息写入到 other 中去， 先这样就会有一个other来专门控制
             }
           } else {
-            console.log(folder, `/${movieFolder}`, 'is not a folder');
+            this.loggerService.log(folder, `/${movieFolder}`, 'is not a folder');
           }
         } catch (error) {
           //  是文件夹
@@ -163,6 +169,6 @@ export class MovieService {
       }
     } catch (e) {}
 
-    return noFolderList
+    return noFolderList;
   }
 }
