@@ -15,6 +15,12 @@ export class GalleryController {
     private readonly movieDbService: MovieService,
   ) {}
 
+  @Get('clean-up')
+  async cleanUpFolder() {
+    const folder = '/Volumes/My Passport';
+    return this.movieDbService.cleanUpFolder(folder);
+  }
+
   /**
    * TODO: 功能还远没完成
    * @param folder

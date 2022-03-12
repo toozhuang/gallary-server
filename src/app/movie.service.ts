@@ -16,6 +16,7 @@ import * as path from 'path';
 import * as _ from 'lodash';
 
 import { INfometa } from './dto/movie.interface';
+import { noConflict } from 'lodash';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { MovieDb } = require('moviedb-promise');
 @Injectable()
@@ -135,5 +136,33 @@ export class MovieService {
     } catch (e) {
       throw new MovieException(-4004, 'init movie db error');
     }
+  }
+
+  /**
+   * 清理单个文件， 将单个文件改成以该文件命名的文件夹，同时将文件挪到内部
+   * @param folder
+   */
+  async cleanUpFolder(folder: string) {
+    const noFolderList = [];
+    try {
+      //我们要开始扫描数据， 然后对这个数据库进行增删改查了
+      const moviesFolder = await fs.promises.readdir(folder, 'utf8');
+
+      // return movieDb;
+
+      // 对用户端的folder 进行扫描，并扫描结果对json文件进行更新
+      for (let index = 0; index < moviesFolder.length; index++) {
+        const movieFolder = moviesFolder[index];
+        try {
+          // 判断该moviesFolder中的movieFolder 是文件 还是是 文件夹
+          const isFolder = fs.lstatSync(path.join(folder, `/${movieFolder}`)).isDirectory();
+          if (!isFolder) {
+            noFolderList.push(movieFolder);
+          }
+        } catch (e) {}
+      }
+    } catch (e) {}
+
+    return noFolderList
   }
 }
