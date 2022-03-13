@@ -53,7 +53,6 @@ export class GalleryController {
   async getHello(
     @Req() req: Request,
   ): Promise<{ name: string; poster: string; meta: string; fanart: string }[]> {
-    console.log('body: ', req);
     const movieDb = this.movieDbService.getMovieDb();
 
     movieDb

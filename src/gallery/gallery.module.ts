@@ -1,10 +1,4 @@
-import {
-  LoggerService,
-  MiddlewareConsumer,
-  Module,
-  NestModule,
-  RequestMethod,
-} from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
 import { GalleryService } from './gallery.service';
 import { GalleryController } from './gallery.controller';
 import { ReadFileService } from './readFile.service';
