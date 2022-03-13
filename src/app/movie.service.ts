@@ -16,7 +16,6 @@ import * as path from 'path';
 import * as _ from 'lodash';
 
 import { INfometa } from './dto/movie.interface';
-import { noConflict } from 'lodash';
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { MovieDb } = require('moviedb-promise');
 
