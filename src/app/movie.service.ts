@@ -3,7 +3,7 @@
  * author: TooZhun9
  * feature： 项目启动的时候提供的 injectable 做的一些操作
  */
-import { Injectable, Logger, LoggerService } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import DB, { DBType } from '../common/db/json-db';
 
@@ -165,7 +165,73 @@ export class MovieService {
         } catch (e) {}
       }
     } catch (e) {}
+    const filteredFileNameList = [];
+    for (let index = 0; index < noFolderList.length; index++) {
+      const fileName = noFolderList[index];
+      if (fileName.startsWith('.')) {
+      } else {
+        filteredFileNameList.push(fileName);
+      }
+    }
 
-    return noFolderList;
+    for (let index = 0; index < filteredFileNameList.length; index++) {
+      await this.moveMovieToFolder(filteredFileNameList[index]);
+    }
+    return {
+      status: 200,
+      message: {
+        movedList: filteredFileNameList,
+      },
+    };
+  }
+
+  /**
+   * 用户传入一个 电影的名字， 通过这个名字
+   * 来创建一个文件夹， 并把该电影 move 进去
+   * @param movieName
+   */
+  async moveMovieToFolder(movieName: string) {
+    const nameIndex = movieName.split('.').length;
+    const newArray = movieName
+      .split('.')
+      .slice(0, nameIndex - 2)
+      .join('.');
+    const folder = '/Volumes/My Passport';
+    const folderDestination = folder + '/' + newArray;
+    // 创建该文件夹
+    // TODO: 这里有一个问题是 folder name 的创建
+    // 必须要无 [ 或者 ]
+    // 需要对 movie name 做一个 regex的 过滤
+    try {
+      await fs.promises.mkdir(folderDestination);
+    } catch (e) {
+      throw new MovieException(
+        -400,
+        JSON.stringify({
+          error: e,
+          file: movieName,
+        }),
+      );
+    }
+    // 将该文件 move 到 该文件夹中
+    try {
+      await fs.promises.rename(`${folder}/${movieName}`, `${folderDestination}/${movieName}`);
+    } catch (e) {
+      throw new MovieException(
+        -400,
+        JSON.stringify({
+          error: e,
+          file: movieName,
+        }),
+      );
+    }
+
+    return {
+      status: 200,
+      message: {
+        oldPath: `${folder}/${movieName}`,
+        newPath: `${folderDestination}/${movieName}`,
+      },
+    };
   }
 }
