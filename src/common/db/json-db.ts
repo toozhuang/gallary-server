@@ -16,6 +16,7 @@ export interface IMovieDB {
 }
 
 const CreateDB: ICreateDB = async (name = 'movie', version: number) => {
+  // console.log('tesst here');
   //  todo: 判断是否存在这个 DB
   await fs.promises.writeFile(
     join(process.cwd(), `json-db/${name}.json`),
