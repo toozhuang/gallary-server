@@ -3,7 +3,7 @@
  * author: TooZhun9
  * feature： 项目启动的时候提供的 injectable 做的一些操作
  */
-import { Injectable, LoggerService } from '@nestjs/common';
+import { Injectable, Logger, LoggerService } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import DB, { DBType } from '../common/db/json-db';
 
@@ -24,11 +24,9 @@ const { MovieDb } = require('moviedb-promise');
 export class MovieService {
   private readonly moviedb;
   private readonly db: DBType;
+  private readonly loggerService = new Logger(MovieService.name);
 
-  constructor(
-    private readonly loggerService: LoggerService,
-    private readonly configService: ConfigService,
-  ) {
+  constructor(private readonly configService: ConfigService) {
     const apiKey = this.configService.get('movie.api_key');
     this.moviedb = new MovieDb(apiKey);
     this.db = DB;

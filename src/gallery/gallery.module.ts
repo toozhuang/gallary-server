@@ -1,13 +1,20 @@
-import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+import {
+  LoggerService,
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+} from '@nestjs/common';
 import { GalleryService } from './gallery.service';
 import { GalleryController } from './gallery.controller';
 import { ReadFileService } from './readFile.service';
 import { MovieService } from '../app/movie.service';
 
 import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
-  providers: [GalleryService, ReadFileService, MovieService],
+  providers: [GalleryService, ReadFileService, ConfigService, MovieService],
   controllers: [GalleryController],
 })
 export class GalleryModule implements NestModule {
@@ -15,7 +22,7 @@ export class GalleryModule implements NestModule {
     // note: 获取 configure 配置信息，
     // 并讲该信息以 json 的方式写入到 文件夹中
     // 只有后续再出错的情况下才去更新该配置文件
-    movieService.setConfiguration();
+    movieService.setConfiguration().then();
   }
 
   configure(consumer: MiddlewareConsumer): any {
