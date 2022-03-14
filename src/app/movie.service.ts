@@ -197,9 +197,8 @@ export class MovieService {
       .slice(0, nameIndex - 2)
       .join('.');
     const folder = '/Volumes/My Passport';
-    const folderDestination = folder + '/' + newArray;
+    const folderDestination = folder + '/' + newArray.replace('[', '').replace(']', '');
     // 创建该文件夹
-    // TODO: 这里有一个问题是 folder name 的创建
     // 必须要无 [ 或者 ]
     // 需要对 movie name 做一个 regex的 过滤
     try {
