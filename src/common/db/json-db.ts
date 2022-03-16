@@ -36,10 +36,14 @@ export interface IExistDB {
   (name: string, version: number): Promise<boolean> | any;
 }
 
-const ExistDB: IExistDB = async (name: string, version: number) => {
+const ExistDB: IExistDB = async (name: string) => {
   try {
     // check the db exist status
-    const jsonDb = await fs.promises.readFile(join(process.cwd(), `json-db/${name}.json`), 'utf8');
+    // const jsonDb =
+    await fs.promises.readFile(
+      join(process.cwd(), `json-db/${name}.json`),
+      'utf8',
+    );
     return true;
   } catch (e) {
     // eslint-disable-next-line no-console
@@ -52,10 +56,13 @@ interface IOpenDB {
   (name: string, version: number): Promise<IMovieDB>;
 }
 
-const OpenDB = async (name: string, version: number) => {
+const OpenDB = async (name: string) => {
   try {
     // check the db exist status
-    const db = await fs.promises.readFile(join(process.cwd(), `json-db/${name}.json`), 'utf8');
+    const db = await fs.promises.readFile(
+      join(process.cwd(), `json-db/${name}.json`),
+      'utf8',
+    );
     return JSON.parse(db);
   } catch (e) {
     throw e;
@@ -97,7 +104,10 @@ export interface ISaveDB {
 }
 
 const SaveDB: ISaveDB = async (dbjson: IMovieDB) => {
-  await fs.promises.writeFile(join(process.cwd(), 'json-db/movie.json'), JSON.stringify(dbjson));
+  await fs.promises.writeFile(
+    join(process.cwd(), 'json-db/movie.json'),
+    JSON.stringify(dbjson),
+  );
 };
 
 export interface DBType {

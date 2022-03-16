@@ -6,9 +6,12 @@ import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import configuration from '../config/configuration';
 
+import { DbModule } from './dto/db.module';
+
 @Module({
   imports: [
     GalleryModule,
+    DbModule,
     //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
       isGlobal: true,

@@ -4,7 +4,7 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint/eslint-plugin','prettier'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
@@ -20,7 +20,11 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    "no-warning-comments": [0, { "terms": ["todo", "fixme", "xxx"], "location": "start" }], //不能有警告备注
-    "no-console": ["error", { allow: ["warn", "error"] }]
+    '@typescript-eslint/no-var-requires': 'off',
+    'no-warning-comments': [
+      0,
+      { terms: ['todo', 'fixme', 'xxx'], location: 'start' },
+    ], //不能有警告备注
+    'no-console': [0, { allow: ['warn', 'error'] }],
   },
 };

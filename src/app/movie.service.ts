@@ -8,15 +8,15 @@ import { ConfigService } from '@nestjs/config';
 import DB, { DBType } from '../common/db/json-db';
 
 import { MovieException } from '../common/exceptions/movie.exception';
+import * as path from 'path';
 import { join } from 'path';
 import * as fs from 'fs';
 
 import { XMLParser } from 'fast-xml-parser';
-import * as path from 'path';
 import * as _ from 'lodash';
 
 import { INfometa } from './dto/movie.interface';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const { MovieDb } = require('moviedb-promise');
 
 @Injectable()
@@ -37,9 +37,7 @@ export class MovieService {
 
   async batchFileFolderContent(movieId: string) {
     const movieDb = await this.db.OpenDB('movie', 1);
-    const movie = this.db.FindItem(movieDb, movieId);
-
-    return movie;
+    return this.db.FindItem(movieDb, movieId);
   }
 
   /**
@@ -92,7 +90,9 @@ export class MovieService {
         const movieFolder = moviesFolder[index];
         try {
           // 判断该moviesFolder中的movieFolder 是文件 还是是 文件夹
-          const isFolder = fs.lstatSync(path.join(folder, `/${movieFolder}`)).isDirectory();
+          const isFolder = fs
+            .lstatSync(path.join(folder, `/${movieFolder}`))
+            .isDirectory();
           if (isFolder) {
             // 如果是文件夹， 那么就读取该文件夹中的meta data 信息
             const movieFolderItemList = await fs.promises.readdir(
@@ -100,12 +100,17 @@ export class MovieService {
               'utf8',
             );
 
-            const extName = movieFolderItemList.map((item) => path.extname(item));
+            const extName = movieFolderItemList.map((item) =>
+              path.extname(item),
+            );
             const nfoIndex = _.indexOf(extName, '.nfo');
             if (nfoIndex > 0) {
               //如果该文件夹中有 nfo meta data 文件
               const XMLdata = await fs.promises.readFile(
-                join(`${folder}/${movieFolder}/`, movieFolderItemList[nfoIndex]),
+                join(
+                  `${folder}/${movieFolder}/`,
+                  movieFolderItemList[nfoIndex],
+                ),
               );
               const parser = new XMLParser();
               const movieItem: INfometa = parser.parse(XMLdata);
@@ -123,7 +128,11 @@ export class MovieService {
               //   TODO：后续需要在这里处理， 把这些不包含 meta 的文件 的具体信息写入到 other 中去， 先这样就会有一个other来专门控制
             }
           } else {
-            this.loggerService.log(folder, `/${movieFolder}`, 'is not a folder');
+            this.loggerService.log(
+              folder,
+              `/${movieFolder}`,
+              'is not a folder',
+            );
           }
         } catch (error) {
           //  是文件夹
@@ -157,7 +166,9 @@ export class MovieService {
         const movieFolder = moviesFolder[index];
         try {
           // 判断该moviesFolder中的movieFolder 是文件 还是是 文件夹
-          const isFolder = fs.lstatSync(path.join(folder, `/${movieFolder}`)).isDirectory();
+          const isFolder = fs
+            .lstatSync(path.join(folder, `/${movieFolder}`))
+            .isDirectory();
           if (!isFolder) {
             noFolderList.push(movieFolder);
           }
@@ -196,7 +207,8 @@ export class MovieService {
       .slice(0, nameIndex - 2)
       .join('.');
     const folder = '/Volumes/My Passport';
-    const folderDestination = folder + '/' + newArray.replace('[', '').replace(']', '');
+    const folderDestination =
+      folder + '/' + newArray.replace('[', '').replace(']', '');
     // 创建该文件夹
     // 必须要无 [ 或者 ]
     // 需要对 movie name 做一个 regex的 过滤
@@ -213,7 +225,10 @@ export class MovieService {
     }
     // 将该文件 move 到 该文件夹中
     try {
-      await fs.promises.rename(`${folder}/${movieName}`, `${folderDestination}/${movieName}`);
+      await fs.promises.rename(
+        `${folder}/${movieName}`,
+        `${folderDestination}/${movieName}`,
+      );
     } catch (e) {
       throw new MovieException(
         -400,

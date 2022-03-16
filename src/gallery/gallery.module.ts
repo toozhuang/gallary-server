@@ -1,4 +1,9 @@
-import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+import {
+  MiddlewareConsumer,
+  Module,
+  NestModule,
+  RequestMethod,
+} from '@nestjs/common';
 import { GalleryService } from './gallery.service';
 import { GalleryController } from './gallery.controller';
 import { ReadFileService } from './readFile.service';
@@ -6,8 +11,10 @@ import { MovieService } from '../app/movie.service';
 
 import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
 import { ConfigService } from '@nestjs/config';
+import { DbModule } from '../app/dto/db.module';
 
 @Module({
+  imports: [DbModule],
   providers: [GalleryService, ReadFileService, ConfigService, MovieService],
   controllers: [GalleryController],
 })
@@ -20,6 +27,8 @@ export class GalleryModule implements NestModule {
   }
 
   configure(consumer: MiddlewareConsumer): any {
-    consumer.apply(MoviedbConfigureMiddleware).forRoutes({ path: '*', method: RequestMethod.ALL });
+    consumer
+      .apply(MoviedbConfigureMiddleware)
+      .forRoutes({ path: '*', method: RequestMethod.ALL });
   }
 }

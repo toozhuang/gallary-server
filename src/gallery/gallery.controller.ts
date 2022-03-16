@@ -1,11 +1,12 @@
-import { Controller, Get, Header, Param, Req } from '@nestjs/common';
+import { Controller, Get, Header, Param } from '@nestjs/common';
 import { ReadFileService } from './readFile.service';
-import { Request } from 'express';
+// import { Request } from 'express';
 import { join } from 'path';
 import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
 import { GalleryService } from './gallery.service';
 import { MovieException } from '../common/exceptions/movie.exception';
+import { Db } from '../app/dto/db';
 
 @Controller('gallery')
 export class GalleryController {
@@ -13,15 +14,21 @@ export class GalleryController {
     private readonly readFileService: ReadFileService,
     private readonly galleryService: GalleryService,
     private readonly movieDbService: MovieService,
-  ) {}
+    private readonly DbService: Db,
+  ) {
+    this.DbService.generateDb('12315');
+  }
 
   @Get('movie-folder/:id')
   async getMovieFolderDetail(@Param('id') movieId: string) {
+    // return this.DbService.tellDb();
     return this.movieDbService.batchFileFolderContent(movieId);
   }
 
   @Get('clean-up')
   async cleanUpFolder() {
+    this.DbService.generateDb('aoaojiao');
+    // return 'aa';
     const folder = '/Volumes/My Passport';
     return this.movieDbService.cleanUpFolder(folder);
   }
@@ -32,7 +39,7 @@ export class GalleryController {
    */
   @Get('scanner')
   @Header('content-type', 'application/json')
-  async scannerFolder(folder = '/Volumes/My Passport/非常警探') {
+  async scannerFolder(folder: string) {
     folder = `/Volumes/My Passport`;
     return this.movieDbService.scannerDb(folder, 'movie', 1);
   }
@@ -55,20 +62,22 @@ export class GalleryController {
   }
 
   @Get()
-  async getHello(
-    @Req() req: Request,
-  ): Promise<{ name: string; poster: string; meta: string; fanart: string }[]> {
+  async getHello(): // @Req() req: Request,
+  Promise<{ name: string; poster: string; meta: string; fanart: string }[]> {
     const movieDb = this.movieDbService.getMovieDb();
 
     movieDb
       .searchMovie({ query: '杀破狼' })
-      .then((res) => {
+      .then(() => {
         // console.log(res);
       })
       .catch(console.error);
 
     // console.log(process.cwd());
-    const jsonDb = await fs.promises.readFile(join(process.cwd(), 'json-db/movie.json'), 'utf8');
+    const jsonDb = await fs.promises.readFile(
+      join(process.cwd(), 'json-db/movie.json'),
+      'utf8',
+    );
     // console.log(jsonDb);
     const result = JSON.parse(jsonDb);
     // return new StreamableFile(jsonDb);
