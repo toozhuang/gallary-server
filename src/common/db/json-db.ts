@@ -1,7 +1,6 @@
 import { join } from 'path';
 import * as fs from 'fs';
 import { INfometa } from '../../app/dto/movie.interface';
-import { ICreateDB, IExistDB, IFindItemDB, IInsertDB, IOpenDB, ISaveDB } from './dto';
 
 /**
  * date: 2022-03-2, Wed, 21:23
@@ -13,6 +12,10 @@ export interface IMovieDB {
   createTime: string;
   version: number;
   database: any[];
+}
+
+export interface ICreateDB {
+  (name: string, version: number): void;
 }
 
 const CreateDB: ICreateDB = async (name = 'movie', version: number) => {
@@ -29,6 +32,10 @@ const CreateDB: ICreateDB = async (name = 'movie', version: number) => {
   return true;
 };
 
+export interface IExistDB {
+  (name: string, version: number): Promise<boolean> | any;
+}
+
 const ExistDB: IExistDB = async (name: string, version: number) => {
   try {
     // check the db exist status
@@ -41,7 +48,11 @@ const ExistDB: IExistDB = async (name: string, version: number) => {
   }
 };
 
-const OpenDB: IOpenDB = async (name: string, version: number) => {
+interface IOpenDB {
+  (name: string, version: number): Promise<IMovieDB>;
+}
+
+const OpenDB = async (name: string, version: number) => {
   try {
     // check the db exist status
     const db = await fs.promises.readFile(join(process.cwd(), `json-db/${name}.json`), 'utf8');
@@ -50,6 +61,11 @@ const OpenDB: IOpenDB = async (name: string, version: number) => {
     throw e;
   }
 };
+
+export interface IInsertDB {
+  (jsonDbObj: any, movieItem: INfometa): void;
+}
+
 const InsertItem = (dbjson: IMovieDB, item: INfometa) => {
   const movies = dbjson.database;
   if (FindItem(dbjson, item.movie.id) !== -1) {
@@ -61,7 +77,11 @@ const InsertItem = (dbjson: IMovieDB, item: INfometa) => {
   return dbjson;
 };
 
-const FindItem: IFindItemDB = (dbjson: IMovieDB, itemId: string) => {
+export interface IFindItemDB {
+  (jsonDbObj: any, itemId: string): number;
+}
+
+const FindItem = (dbjson: IMovieDB, itemId: string) => {
   const { database: movies } = dbjson;
   const hasItem = -1;
   for (let index = 0; index < movies.length; index++) {
@@ -71,6 +91,10 @@ const FindItem: IFindItemDB = (dbjson: IMovieDB, itemId: string) => {
   }
   return hasItem;
 };
+
+export interface ISaveDB {
+  (jsonDbObj: any): void;
+}
 
 const SaveDB: ISaveDB = async (dbjson: IMovieDB) => {
   await fs.promises.writeFile(join(process.cwd(), 'json-db/movie.json'), JSON.stringify(dbjson));

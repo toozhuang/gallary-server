@@ -15,6 +15,11 @@ export class GalleryController {
     private readonly movieDbService: MovieService,
   ) {}
 
+  @Get('movie-folder/:id')
+  async getMovieFolderDetail(@Param('id') movieId: string) {
+    return this.movieDbService.batchFileFolderContent(movieId);
+  }
+
   @Get('clean-up')
   async cleanUpFolder() {
     const folder = '/Volumes/My Passport';

@@ -35,18 +35,12 @@ export class MovieService {
     return this.moviedb;
   }
 
-  // const jsonDb = await fs.promises.readFile(join(process.cwd(), 'json-db/movie.json'), 'utf8');
-  // // console.log(jsonDb);
-  // const result = JSON.parse(jsonDb);
-  // console.log(result);
-  // const XMLdata = await fs.promises.readFile(
-  //   join(process.cwd(), 'json-db/非常警探.Restless.2022.WEB-DL.1080p.X264.nfo'),
-  // );
-  // const parser = new XMLParser();
-  // const jObj = parser.parse(XMLdata);
-  // result.push(jObj.movie);
-  //
-  // await fs.promises.writeFile(join(process.cwd(), 'json-db/test.json'), JSON.stringify(result));
+  async batchFileFolderContent(movieId: string) {
+    const movieDb = await this.db.OpenDB('movie', 1);
+    const movie = this.db.FindItem(movieDb, movieId);
+
+    return movie;
+  }
 
   /**
    * 电影API查询的时候的configuration
