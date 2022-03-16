@@ -48,6 +48,11 @@ export class MovieService {
   //
   // await fs.promises.writeFile(join(process.cwd(), 'json-db/test.json'), JSON.stringify(result));
 
+  /**
+   * 电影API查询的时候的configuration
+   * 举例： 从 open api 获取到的 movie image 只是 url， 但这个url
+   * 还需要前面的base_url， 那么这部分就需要从 configuration 中获取
+   */
   async setConfiguration() {
     try {
       await fs.promises.access(
