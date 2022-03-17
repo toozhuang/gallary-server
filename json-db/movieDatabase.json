@@ -1,8 +1,12 @@
 {
-  "version": 1,
-  "update": "2022年03月17日",
-  "movieDetail": {
-    "version": 2,
-    "update": "2022年03月17日Thu Mar 17 2022 22:01:06 GMT+0800 (Hong Kong Standard Time)"
-  }
+  "movies": [
+    {
+      "version": 1,
+      "update": "2022年03月17日",
+      "movieDetail": {
+        "version": 2,
+        "update": "2022年03月17日Thu Mar 17 2022 22:01:06 GMT+0800 (Hong Kong Standard Time)"
+      }
+    }
+  ]
 }
