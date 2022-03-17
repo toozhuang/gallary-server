@@ -5,9 +5,7 @@ import { GalleryModule } from '../gallery/gallery.module';
 import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import configuration from '../config/configuration';
-
-import { DbModule } from './dto/db.module';
-import { DbService } from './dto/db.service';
+import { DbModule } from '../db/db.module';
 
 @Module({
   imports: [
@@ -31,7 +29,5 @@ import { DbService } from './dto/db.service';
   providers: [ConfigService],
 })
 export class AppModule {
-  constructor(private dbService: DbService) {
-    this.dbService.generateDb('aoaojiaoba');
-  }
+  // constructor() {}
 }
