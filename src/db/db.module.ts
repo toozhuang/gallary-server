@@ -5,9 +5,21 @@
  */
 import { Module } from '@nestjs/common';
 import { DbService } from './db.service';
+// import { JsonDB } from 'node-json-db';
+// import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
 
 @Module({
   providers: [DbService],
   exports: [DbService],
 })
-export class DbModule {}
+export class DbModule {
+  constructor() {
+    // new JsonDB(new Config('./json-db/movieDatabase', true, false, '/')).push(
+    //   '/movieDetail',
+    //   {
+    //     version: 2,
+    //     update: `2022年03月17日${new Date()}`,
+    //   },
+    // );
+  }
+}
