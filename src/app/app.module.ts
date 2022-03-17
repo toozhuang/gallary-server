@@ -7,6 +7,7 @@ import * as path from 'path';
 import configuration from '../config/configuration';
 
 import { DbModule } from './dto/db.module';
+import { DbService } from './dto/db.service';
 
 @Module({
   imports: [
@@ -29,4 +30,8 @@ import { DbModule } from './dto/db.module';
   controllers: [AppController],
   providers: [ConfigService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private dbService: DbService) {
+    this.dbService.generateDb('aoaojiaoba');
+  }
+}

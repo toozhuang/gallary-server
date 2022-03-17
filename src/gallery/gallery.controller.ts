@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
 import { GalleryService } from './gallery.service';
 import { MovieException } from '../common/exceptions/movie.exception';
-import { Db } from '../app/dto/db';
+import { DbService } from '../app/dto/db.service';
 
 @Controller('gallery')
 export class GalleryController {
@@ -14,9 +14,9 @@ export class GalleryController {
     private readonly readFileService: ReadFileService,
     private readonly galleryService: GalleryService,
     private readonly movieDbService: MovieService,
-    private readonly DbService: Db,
+    private readonly DbServices: DbService,
   ) {
-    this.DbService.generateDb('12315');
+    // this.DbServices.generateDb('12315');
   }
 
   @Get('movie-folder/:id')
@@ -27,7 +27,7 @@ export class GalleryController {
 
   @Get('clean-up')
   async cleanUpFolder() {
-    this.DbService.generateDb('aoaojiao');
+    this.DbServices.generateDb('aoaojiao');
     // return 'aa';
     const folder = '/Volumes/My Passport';
     return this.movieDbService.cleanUpFolder(folder);

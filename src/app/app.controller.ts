@@ -1,9 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
-import { Db } from './dto/db';
+import { DbService } from './dto/db.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly db: Db) {}
+  constructor(private readonly db: DbService) {}
 
   @Get()
   haha() {

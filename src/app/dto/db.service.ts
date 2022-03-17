@@ -6,9 +6,10 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class Db {
+export class DbService {
   // name = 'hoa a y';
   private db;
+
   generateDb(dbs: string) {
     this.db = dbs;
   }
