@@ -121,7 +121,7 @@ export class MovieService {
                 DB.InsertItem(movieDb, movieItem);
                 await DB.SaveDB(movieDb);
               } else {
-                // console.log('已经存在该movie的信息', movieItem.movie.id);
+                // console.log('已经存在该movie的信息  ', movieItem.movie.id);
               }
             } else {
               // todo: 不包含 meta 文件， 当前情况则跳过
