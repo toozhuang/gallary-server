@@ -35,6 +35,10 @@ export class MovieService {
     return this.moviedb;
   }
 
+  /**
+   * 返回单个 movie id 信息
+   * @param movieId
+   */
   async batchFileFolderContent(movieId: string) {
     const movieDb = await this.db.OpenDB('movie', 1);
     return this.db.FindItem(movieDb, movieId);

@@ -11,7 +11,7 @@ import { MovieService } from '../app/movie.service';
 
 import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
 import { ConfigService } from '@nestjs/config';
-import { DbModule } from '../app/dto/db.module';
+import { DbModule } from '../db/db.module';
 
 @Module({
   imports: [DbModule],

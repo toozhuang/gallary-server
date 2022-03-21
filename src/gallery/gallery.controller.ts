@@ -6,7 +6,7 @@ import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
 import { GalleryService } from './gallery.service';
 import { MovieException } from '../common/exceptions/movie.exception';
-import { DbService } from '../app/dto/db.service';
+import { DbService } from '../db/db.service';
 
 @Controller('gallery')
 export class GalleryController {
@@ -22,12 +22,13 @@ export class GalleryController {
   @Get('movie-folder/:id')
   async getMovieFolderDetail(@Param('id') movieId: string) {
     // return this.DbService.tellDb();
-    return this.movieDbService.batchFileFolderContent(movieId);
+    return this.DbServices.init();
+    // return this.movieDbService.batchFileFolderContent(movieId);
   }
 
   @Get('clean-up')
   async cleanUpFolder() {
-    this.DbServices.generateDb('aoaojiao');
+    // this.DbServices.generateDb('aoaojiao');
     // return 'aa';
     const folder = '/Volumes/My Passport';
     return this.movieDbService.cleanUpFolder(folder);

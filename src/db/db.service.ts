@@ -9,7 +9,7 @@ export class DbService {
     const adapter = new FileSync('./json-db/movieDatabase.json');
     const db = new Low(adapter);
     db.read();
-    console.log(db);
+    console.log('我是不是来了啊');
 
     console.log(db.get('movies').value());
   }
