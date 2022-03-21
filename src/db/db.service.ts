@@ -5,12 +5,14 @@ const FileSync = require('lowdb/adapters/FileSync');
 
 @Injectable()
 export class DbService {
-  async init() {
-    const adapter = new FileSync('./json-db/movieDatabase.json');
-    const db = new Low(adapter);
-    db.read();
-    console.log('我是不是来了啊');
+  private DB: any;
 
-    console.log(db.get('movies').value());
+  public init(dbLocation: string) {
+    const adapter = new FileSync(dbLocation);
+    this.DB = new Low(adapter);
+  }
+
+  public get() {
+    return this.DB;
   }
 }

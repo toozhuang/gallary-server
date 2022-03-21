@@ -21,8 +21,10 @@ export class GalleryController {
 
   @Get('movie-folder/:id')
   async getMovieFolderDetail(@Param('id') movieId: string) {
-    // return this.DbService.tellDb();
-    return this.DbServices.init();
+    const db = this.DbServices.get();
+    const value = db.get('movies').value();
+    console.log(value);
+    return 1;
     // return this.movieDbService.batchFileFolderContent(movieId);
   }
 

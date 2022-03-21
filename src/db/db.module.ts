@@ -12,6 +12,6 @@ import { DbService } from './db.service';
 })
 export class DbModule {
   constructor(private dbService: DbService) {
-    dbService.init().then();
+    dbService.init('./json-db/movieDatabase.json');
   }
 }
