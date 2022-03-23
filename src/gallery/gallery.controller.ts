@@ -29,6 +29,11 @@ export class GalleryController {
   @Get('clean-up')
   async cleanUpFolder() {
     // this.DbServices.generateDb('aoaojiao');
+    const db = this.dbService.DB;
+    this.dbService.DB.data ||= { posts: [] };
+    const { posts } = db.data;
+    posts.push({ title: 'lowdb' });
+    this.dbService.write();
     return this.dbService.DB.data;
     // return 'aa';
     // const folder = '/Volumes/My Passport';

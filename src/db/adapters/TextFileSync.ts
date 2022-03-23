@@ -36,13 +36,11 @@ export class TextFileSync implements SyncAdapter<string> {
    */
   read(): string | null {
     let data;
-    console.log('按理说是要过来 read了把？ ', this.#filename);
     try {
-      console.log(this.#filename);
       data = fs.readFileSync(this.#filename, 'utf-8');
     } catch (e) {
-      console.log('error: ');
       if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
+        // console.log() todo: 这里要 log error
         return null;
       }
       throw e;

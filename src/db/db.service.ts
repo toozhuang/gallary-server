@@ -2,14 +2,22 @@ import { Injectable } from '@nestjs/common';
 import { JSONFileSync } from './adapters/JSONFileSync';
 import { LowSync } from './LowSync';
 
+type Data = {
+  posts: Post[];
+};
+
+type Post = {
+  title: string;
+};
+
 @Injectable()
 export class DbService {
-  public DB: LowSync;
+  public DB: LowSync<Data>;
 
   public init(dbLocation: string) {
     // adapter read write
-    const adapter = new JSONFileSync(dbLocation);
-    this.DB = new LowSync(adapter);
+    const adapter = new JSONFileSync<Data>(dbLocation);
+    this.DB = new LowSync<Data>(adapter);
   }
 
   public read() {
