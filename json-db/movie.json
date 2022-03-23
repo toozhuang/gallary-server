@@ -1,6 +1,6 @@
 {
   "createTime": "03-03-2022",
-  "database": [
+  "movies": [
     {
       "title": "13 Minutes",
       "originaltitle": "13 Minutes",
@@ -25,7 +25,9 @@
         "https://assets.fanart.tv/fanart/movies/787723/hdmovielogo/13-minutes-615cb0e16b819.png",
         "https://assets.fanart.tv/fanart/movies/787723/hdmovielogo/13-minutes-615cb0e16b819.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/i4sIFPDfPyBm1GYXMWnJTyFutcv.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/i4sIFPDfPyBm1GYXMWnJTyFutcv.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt9274670",
@@ -229,7 +231,11 @@
         }
       ],
       "producer": [
-        { "name": "Henry Winterstern", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Henry Winterstern",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         {
           "name": "Shannon Makhanian",
           "role": "Casting",
@@ -255,7 +261,11 @@
         { "name": "Hayley Brown", "role": "Associate Producer", "thumb": "" },
         { "name": "Jere Hausfater", "role": "Executive Producer", "thumb": "" },
         { "name": "Lindsay Gossling", "role": "Producer", "thumb": "" },
-        { "name": "Delphine Perrier", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Delphine Perrier",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         { "name": "Travis Farncombe", "role": "Producer", "thumb": "" }
       ],
       "trailer": "plugin://plugin.video.hdtrailers_net/video/apple.com/https%3A%2F%2Fmovietrailers.apple.com%2Fmovies%2Findependent%2F13-minutes%2F13-minutes-trailer-1_h720p.mov",
@@ -313,7 +323,9 @@
         "https://assets.fanart.tv/fanart/movies/522016/movieposter/the-355-61ba15e3b0455.jpg",
         "https://assets.fanart.tv/fanart/movies/522016/hdmovielogo/355-5f7d6e2f928b7.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/8pgKccb5PfE1kWB9qqiXJem83VC.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/8pgKccb5PfE1kWB9qqiXJem83VC.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt8356942",
@@ -328,7 +340,12 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Action", "Thriller"],
-      "studio": ["Freckle Films", "Genre Films", "FilmNation Entertainment", "Universal Pictures"],
+      "studio": [
+        "Freckle Films",
+        "Genre Films",
+        "FilmNation Entertainment",
+        "Universal Pictures"
+      ],
       "credits": ["Simon Kinberg", "Theresa Rebeck", "Bek Smith"],
       "director": "Simon Kinberg",
       "tag": ["spy", "agent"],
@@ -792,7 +809,9 @@
         "https://assets.fanart.tv/fanart/movies/611698/movieposter/-606079f7ebb1e.jpg",
         "https://assets.fanart.tv/fanart/movies/611698/hdmovielogo/a-writers-odyssey-61adf05b5d3d3.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/tE0WnUqq5eYhHcD73BWSQpa6k5g.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/tE0WnUqq5eYhHcD73BWSQpa6k5g.jpg"
+      },
       "mpaa": "",
       "certification": "",
       "id": "tt9685342",
@@ -808,7 +827,13 @@
       "lastplayed": "",
       "genre": ["Drama", "Action", "Fantasy"],
       "studio": ["United Entertainment Partners", "华策影业（上海）有限公司"],
-      "credits": ["Haiyan Qin", "Lu Yang", "Chen Shu", "Yang Yu", "Xuetao Shuang"],
+      "credits": [
+        "Haiyan Qin",
+        "Lu Yang",
+        "Chen Shu",
+        "Yang Yu",
+        "Xuetao Shuang"
+      ],
       "director": "Lu Yang",
       "actor": [
         {
@@ -905,7 +930,11 @@
             { "codec": "EAC3", "language": "zho", "channels": 2 },
             { "codec": "AC3", "language": "zho", "channels": 6 }
           ],
-          "subtitle": [{ "language": "zho" }, { "language": "zho" }, { "language": "eng" }]
+          "subtitle": [
+            { "language": "zho" },
+            { "language": "zho" },
+            { "language": "eng" }
+          ]
         }
       },
       "source": "BLURAY",
@@ -941,7 +970,9 @@
         "http://assets.fanart.tv/fanart/movies/556867/movieposter/breaking-news-in-yuba-county-605231f498f41.jpg",
         "http://assets.fanart.tv/fanart/movies/556867/hdmovielogo/breaking-news-in-yuba-county-6052319758cb2.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/oUB15jCMMbDJoEWu2zqOg1ucMOy.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/oUB15jCMMbDJoEWu2zqOg1ucMOy.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt7737640",
@@ -1141,7 +1172,9 @@
       "tagline": "",
       "runtime": 110,
       "thumb": "http://image.tmdb.org/t/p/original/ypZQQ9R8uXiRpTKtRoT5gcQM5RM.jpg",
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/cyci1aTONeJLzGzNqGawRgCKCti.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/cyci1aTONeJLzGzNqGawRgCKCti.jpg"
+      },
       "mpaa": "",
       "certification": "",
       "id": "tt1156506",
@@ -1164,7 +1197,13 @@
         "BNJArmor",
         "Sirius Pictures International"
       ],
-      "credits": ["Larry Cohen", "Chris Morgan", "Benny Chan", "Alan Yuen", "Bing Xu"],
+      "credits": [
+        "Larry Cohen",
+        "Chris Morgan",
+        "Benny Chan",
+        "Alan Yuen",
+        "Bing Xu"
+      ],
       "director": "Benny Chan",
       "tag": [
         "hostage",
@@ -1267,7 +1306,11 @@
             { "codec": "EAC3", "language": "zho", "channels": 6 },
             { "codec": "AC3", "language": "zho", "channels": 6 }
           ],
-          "subtitle": [{ "language": "zho" }, { "language": "zho" }, { "language": "eng" }]
+          "subtitle": [
+            { "language": "zho" },
+            { "language": "zho" },
+            { "language": "eng" }
+          ]
         }
       },
       "source": "BLURAY",
@@ -1302,7 +1345,9 @@
         "http://assets.fanart.tv/fanart/movies/452558/moviedisc/paradox-5bd60c1c63aa4.png",
         "http://assets.fanart.tv/fanart/movies/452558/hdmovielogo/paradox-5b07cb6807af1.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/ko0afOTNpHNTGahJqN7qauZbWWS.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/ko0afOTNpHNTGahJqN7qauZbWWS.jpg"
+      },
       "mpaa": "",
       "certification": "",
       "id": "tt7245176",
@@ -1496,7 +1541,9 @@
         "https://assets.fanart.tv/fanart/movies/603/movieposter/the-matrix-53b1a26541275.jpg",
         "https://assets.fanart.tv/fanart/movies/603/hdmovielogo/the-matrix-5190bfebe0bcf.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/oMCUPlwnk2z3QDnzXBxYY6hJogQ.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/oMCUPlwnk2z3QDnzXBxYY6hJogQ.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt0133093",
@@ -1792,13 +1839,33 @@
         },
         { "name": "Shauna Wolifson", "role": "Casting", "thumb": "" },
         { "name": "Dan Cracchiolo", "role": "Co-Producer", "thumb": "" },
-        { "name": "Richard Mirisch", "role": "Associate Producer", "thumb": "" },
-        { "name": "Carol Hughes", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Richard Mirisch",
+          "role": "Associate Producer",
+          "thumb": ""
+        },
+        {
+          "name": "Carol Hughes",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Fiona Searson", "role": "Publicist", "thumb": "" },
         { "name": "Peter Lawless", "role": "Location Manager", "thumb": "" },
-        { "name": "Grayden Le Breton", "role": "Assistant Unit Manager", "thumb": "" },
-        { "name": "Megan Worthy", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Marge Rowland", "role": "Production Accountant", "thumb": "" }
+        {
+          "name": "Grayden Le Breton",
+          "role": "Assistant Unit Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Megan Worthy",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Marge Rowland",
+          "role": "Production Accountant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=m8e-FF8MsqU",
       "languages": "英文",
@@ -1851,7 +1918,9 @@
         "https://assets.fanart.tv/fanart/movies/604/movieposter/the-matrix-reloaded-53f85932dc737.jpg",
         "https://assets.fanart.tv/fanart/movies/604/hdmovielogo/the-matrix-reloaded-51166df1d3601.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/6N8KmMYQ7T17usvxijrNBswEvGt.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/6N8KmMYQ7T17usvxijrNBswEvGt.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt0234215",
@@ -1866,7 +1935,11 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Adventure", "Action", "Thriller", "Science Fiction"],
-      "studio": ["Village Roadshow Pictures", "Silver Pictures", "NPV Entertainment"],
+      "studio": [
+        "Village Roadshow Pictures",
+        "Silver Pictures",
+        "NPV Entertainment"
+      ],
       "credits": ["Lilly Wachowski", "Lana Wachowski"],
       "director": ["Lilly Wachowski", "Lana Wachowski"],
       "tag": [
@@ -2414,30 +2487,86 @@
           "thumb": "http://image.tmdb.org/t/p/h632/Ai46ihtsE18QWKZGDEJ8AWiymqH.jpg"
         },
         { "name": "Steve Richards", "role": "Associate Producer", "thumb": "" },
-        { "name": "Lindsey Hayes Kroeger", "role": "Casting Associate", "thumb": "" },
+        {
+          "name": "Lindsey Hayes Kroeger",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
         {
           "name": "Barbara Harris",
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/d1BGeZT2b81Wa9gCOPdrXGWUtmR.jpg"
         },
-        { "name": "Jacqueline King", "role": "Production Coordinator", "thumb": "" },
-        { "name": "L. Dean Jones Jr.", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Jacqueline King",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "L. Dean Jones Jr.",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Beau Bonneau", "role": "Extras Casting", "thumb": "" },
         { "name": "Peter Lawless", "role": "Location Manager", "thumb": "" },
-        { "name": "Gerald Scaife", "role": "Production Supervisor", "thumb": "" },
-        { "name": "Mandy Butler", "role": "Production Accountant", "thumb": "" },
-        { "name": "Peter Martorano", "role": "Assistant Location Manager", "thumb": "" },
-        { "name": "Vicki Popplewell", "role": "Associate Producer", "thumb": "" },
-        { "name": "Mimi N. McGreal", "role": "Travel Coordinator", "thumb": "" },
+        {
+          "name": "Gerald Scaife",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
+        {
+          "name": "Mandy Butler",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Peter Martorano",
+          "role": "Assistant Location Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Vicki Popplewell",
+          "role": "Associate Producer",
+          "thumb": ""
+        },
+        {
+          "name": "Mimi N. McGreal",
+          "role": "Travel Coordinator",
+          "thumb": ""
+        },
         { "name": "Beth Bargas", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Linden Johnson", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Adrienne Swan", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Caryn Cheever", "role": "Second Assistant Accountant", "thumb": "" },
-        { "name": "Lisa Jean Felski", "role": "First Assistant Accountant", "thumb": "" },
-        { "name": "Amanda Crittenden", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Linden Johnson",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Adrienne Swan",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Caryn Cheever",
+          "role": "Second Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Lisa Jean Felski",
+          "role": "First Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Amanda Crittenden",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "David L. Wolfson", "role": "Location Manager", "thumb": "" },
         { "name": "Cathy Marshall", "role": "Payroll Accountant", "thumb": "" },
-        { "name": "Henrie Stride", "role": "Extras Casting Assistant", "thumb": "" }
+        {
+          "name": "Henrie Stride",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=zsgrsiZoymA",
       "languages": "英文",
@@ -2490,7 +2619,9 @@
         "https://assets.fanart.tv/fanart/movies/624860/movieposter/the-matrix-resurrections-6151c6f296e83.jpg",
         "https://assets.fanart.tv/fanart/movies/624860/hdmovielogo/the-matrix-resurrections-6196ad65f022d.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/pwZZjwx4PS00uwB37451S80CbA8.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/pwZZjwx4PS00uwB37451S80CbA8.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt10838180",
@@ -2505,8 +2636,17 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Science Fiction", "Action", "Adventure"],
-      "studio": ["Warner Bros. Pictures", "Village Roadshow Pictures", "Venus Castina Productions"],
-      "credits": ["Lilly Wachowski", "Lana Wachowski", "David Mitchell", "Aleksandar Hemon"],
+      "studio": [
+        "Warner Bros. Pictures",
+        "Village Roadshow Pictures",
+        "Venus Castina Productions"
+      ],
+      "credits": [
+        "Lilly Wachowski",
+        "Lana Wachowski",
+        "David Mitchell",
+        "Aleksandar Hemon"
+      ],
       "director": "Lana Wachowski",
       "tag": [
         "artificial intelligence",
@@ -2917,7 +3057,11 @@
         { "name": "Henning Molfenter", "role": "Co-Producer", "thumb": "" },
         { "name": "Charlie Woebcken", "role": "Co-Producer", "thumb": "" },
         { "name": "Terry Needham", "role": "Executive Producer", "thumb": "" },
-        { "name": "Miki Emmrich", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Miki Emmrich",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Garrett Grant", "role": "Executive Producer", "thumb": "" },
         {
           "name": "Carmen Cuba",
@@ -2932,10 +3076,26 @@
         { "name": "Michael Salven", "role": "Executive Producer", "thumb": "" },
         { "name": "Matt Bilski", "role": "Associate Producer", "thumb": "" },
         { "name": "Jesse Ehrman", "role": "Executive Producer", "thumb": "" },
-        { "name": "Toby Pease", "role": "Unit Production Manager", "thumb": "" },
-        { "name": "Marc-André Gerke", "role": "Location Coordinator", "thumb": "" },
-        { "name": "Karin Wachowski", "role": "Executive Producer", "thumb": "" },
-        { "name": "Aimee Allegretti", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Toby Pease",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Marc-André Gerke",
+          "role": "Location Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Karin Wachowski",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
+        {
+          "name": "Aimee Allegretti",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         { "name": "Loranne Turgeon", "role": "Associate Producer", "thumb": "" }
       ],
       "trailer": "plugin://plugin.video.hdtrailers_net/video/apple.com/https%3A%2F%2Fmovietrailers.apple.com%2Fmovies%2Fwb%2Fthe-matrix-resurrections%2Fmatrix-resurrections-trailer-2_h720p.mov",
@@ -2990,7 +3150,9 @@
         "https://assets.fanart.tv/fanart/movies/605/movieposter/the-matrix-revolutions-52467965062e4.jpg",
         "https://assets.fanart.tv/fanart/movies/605/hdmovielogo/the-matrix-revolutions-58a3445880ecb.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/1k3QCHhpAqKeOtpPPK8mHTRX1nO.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/1k3QCHhpAqKeOtpPPK8mHTRX1nO.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt0242653",
@@ -3005,7 +3167,11 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Adventure", "Action", "Thriller", "Science Fiction"],
-      "studio": ["Village Roadshow Pictures", "NPV Entertainment", "Silver Pictures"],
+      "studio": [
+        "Village Roadshow Pictures",
+        "NPV Entertainment",
+        "Silver Pictures"
+      ],
       "credits": ["Lilly Wachowski", "Lana Wachowski"],
       "director": ["Lilly Wachowski", "Lana Wachowski"],
       "tag": [
@@ -3373,13 +3539,37 @@
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/d1BGeZT2b81Wa9gCOPdrXGWUtmR.jpg"
         },
-        { "name": "Jacqueline King", "role": "Production Coordinator", "thumb": "" },
-        { "name": "L. Dean Jones Jr.", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Jacqueline King",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "L. Dean Jones Jr.",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Peter Lawless", "role": "Location Manager", "thumb": "" },
-        { "name": "Gerald Scaife", "role": "Production Supervisor", "thumb": "" },
-        { "name": "Vicki Popplewell", "role": "Associate Producer", "thumb": "" },
-        { "name": "Amanda Crittenden", "role": "Production Supervisor", "thumb": "" },
-        { "name": "Henrie Stride", "role": "Extras Casting Assistant", "thumb": "" }
+        {
+          "name": "Gerald Scaife",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
+        {
+          "name": "Vicki Popplewell",
+          "role": "Associate Producer",
+          "thumb": ""
+        },
+        {
+          "name": "Amanda Crittenden",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
+        {
+          "name": "Henrie Stride",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=hMbexEPAOQI",
       "languages": "英文, 法文",
@@ -3432,7 +3622,9 @@
         "http://assets.fanart.tv/fanart/movies/24428/movieposter/marvels-the-avengers-5218f0bca8efd.jpg",
         "http://assets.fanart.tv/fanart/movies/24428/hdmovielogo/marvels-the-avengers-50430913e314d.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/huOmAVZBfXPMIRwjFmyGzZLojHR.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/huOmAVZBfXPMIRwjFmyGzZLojHR.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt0848228",
@@ -4195,7 +4387,11 @@
         },
         { "name": "Jeremy Latcham", "role": "Executive Producer", "thumb": "" },
         { "name": "Tamara Hunter", "role": "Casting Associate", "thumb": "" },
-        { "name": "Linda Weaver", "role": "Extras Casting Assistant", "thumb": "" },
+        {
+          "name": "Linda Weaver",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
         {
           "name": "Cressa Maeve Beer",
           "role": "Production Assistant",
@@ -4207,18 +4403,38 @@
         { "name": "Nadia Paine", "role": "Production Supervisor", "thumb": "" },
         { "name": "David Rumble", "role": "Location Manager", "thumb": "" },
         { "name": "Ruben Malaret", "role": "Publicist", "thumb": "" },
-        { "name": "Scott Allen Logan", "role": "Location Manager", "thumb": "" },
-        { "name": "Brigette Lester", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Scott Allen Logan",
+          "role": "Location Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Brigette Lester",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         {
           "name": "Johnny Gidcomb",
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/ojyjYRyRop9IKk4eXR3wwAJsgpd.jpg"
         },
         { "name": "Madina Milana", "role": "Casting Associate", "thumb": "" },
-        { "name": "Christie Kwan", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Maryellen Aviano", "role": "Extras Casting Coordinator", "thumb": "" },
+        {
+          "name": "Christie Kwan",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Maryellen Aviano",
+          "role": "Extras Casting Coordinator",
+          "thumb": ""
+        },
         { "name": "Kate Amer", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Kerry Newberry", "role": "Production Accountant", "thumb": "" },
+        {
+          "name": "Kerry Newberry",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
         {
           "name": "Trinh Tran",
           "role": "Production Assistant",
@@ -4229,10 +4445,26 @@
         { "name": "Becky Woodward", "role": "Casting Assistant", "thumb": "" },
         { "name": "Jennifer Yost", "role": "Casting Assistant", "thumb": "" },
         { "name": "Allie Levin", "role": "Extras Casting", "thumb": "" },
-        { "name": "Jim Burleson", "role": "Extras Casting Assistant", "thumb": "" },
-        { "name": "Joshua Fritel", "role": "Extras Casting Assistant", "thumb": "" },
-        { "name": "Amanda L. Preputnik", "role": "Extras Casting Assistant", "thumb": "" },
-        { "name": "Anne Reeves", "role": "Extras Casting Assistant", "thumb": "" }
+        {
+          "name": "Jim Burleson",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Joshua Fritel",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Amanda L. Preputnik",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Anne Reeves",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=fZsu3sbWnAU",
       "languages": "English, Hindi, Russian",
@@ -4289,7 +4521,9 @@
         "http://assets.fanart.tv/fanart/movies/475557/movieposter/joker-5d6df4673945c.jpg",
         "http://assets.fanart.tv/fanart/movies/475557/hdmovielogo/untitled-joker-origin-movie-5ca589d53506c.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/2nbKZ5RWFSvjq5IGVRcz8kAolmw.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/2nbKZ5RWFSvjq5IGVRcz8kAolmw.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt7286456",
@@ -4311,7 +4545,13 @@
         "Bron Studios",
         "DC Films"
       ],
-      "credits": ["Scott Silver", "Bob Kane", "Todd Phillips", "Bill Finger", "Jerry Robinson"],
+      "credits": [
+        "Scott Silver",
+        "Bob Kane",
+        "Todd Phillips",
+        "Bill Finger",
+        "Jerry Robinson"
+      ],
       "director": "Todd Phillips",
       "tag": [
         "street gang",
@@ -4819,7 +5059,11 @@
           "role": "Executive Producer",
           "thumb": "http://image.tmdb.org/t/p/h632/cXiiH0SSk5UHCvHOVAhHX7tNuls.jpg"
         },
-        { "name": "Richard Baratta", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Richard Baratta",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         {
           "name": "Emma Tillinger Koskoff",
           "role": "Producer",
@@ -4837,7 +5081,11 @@
           "thumb": "http://image.tmdb.org/t/p/h632/A6FPht87DiqXzp456WjakLi2AtP.jpg"
         },
         { "name": "David Webb", "role": "Co-Producer", "thumb": "" },
-        { "name": "Carla Raij", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Carla Raij",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Joseph Garner", "role": "Executive Producer", "thumb": "" },
         {
           "name": "Aaron L. Gilbert",
@@ -4853,17 +5101,37 @@
         { "name": "Shayna Markowitz", "role": "Casting", "thumb": "" },
         { "name": "Joan Altman", "role": "Production Accountant", "thumb": "" },
         { "name": "Grant Wilfley", "role": "Extras Casting", "thumb": "" },
-        { "name": "Benjamin J. Stern", "role": "Assistant Location Manager", "thumb": "" },
+        {
+          "name": "Benjamin J. Stern",
+          "role": "Assistant Location Manager",
+          "thumb": ""
+        },
         {
           "name": "Anjay Nagpal",
           "role": "Co-Executive Producer",
           "thumb": "http://image.tmdb.org/t/p/h632/8Ei4WnP2oxkfa8QOtoSffclpaZj.jpg"
         },
-        { "name": "Joyce Hsieh", "role": "First Assistant Accountant", "thumb": "" },
+        {
+          "name": "Joyce Hsieh",
+          "role": "First Assistant Accountant",
+          "thumb": ""
+        },
         { "name": "Susan Strine", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Candice Alustiza-Lee", "role": "Casting Associate", "thumb": "" },
-        { "name": "Jordan Felix", "role": "Trainee Production Coordinator", "thumb": "" },
-        { "name": "Leah Winkler", "role": "Production Office Coordinator", "thumb": "" },
+        {
+          "name": "Candice Alustiza-Lee",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
+        {
+          "name": "Jordan Felix",
+          "role": "Trainee Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Leah Winkler",
+          "role": "Production Office Coordinator",
+          "thumb": ""
+        },
         { "name": "Ben Gatollari", "role": "Travel Coordinator", "thumb": "" },
         { "name": "Will Limpert", "role": "Production Secretary", "thumb": "" },
         { "name": "Kerry Roberts", "role": "Payroll Accountant", "thumb": "" },
@@ -4872,16 +5140,48 @@
         { "name": "Kathryn Mell", "role": "Assistant Accountant", "thumb": "" },
         { "name": "Evan Reed", "role": "Assistant Accountant", "thumb": "" },
         { "name": "Ke Ze Lui", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Suzette Baker", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Katherine Delaney", "role": "Assistant Location Manager", "thumb": "" },
-        { "name": "Karen T. Salva", "role": "Assistant Location Manager", "thumb": "" },
-        { "name": "Dan Welch", "role": "Assistant Location Manager", "thumb": "" },
+        {
+          "name": "Suzette Baker",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Katherine Delaney",
+          "role": "Assistant Location Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Karen T. Salva",
+          "role": "Assistant Location Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Dan Welch",
+          "role": "Assistant Location Manager",
+          "thumb": ""
+        },
         { "name": "Alec Bates", "role": "Location Coordinator", "thumb": "" },
-        { "name": "Juliana Hatkoff", "role": "Producer's Assistant", "thumb": "" },
-        { "name": "Justine Conte", "role": "Producer's Assistant", "thumb": "" },
+        {
+          "name": "Juliana Hatkoff",
+          "role": "Producer's Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Justine Conte",
+          "role": "Producer's Assistant",
+          "thumb": ""
+        },
         { "name": "Matthew Claar", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Faith Maciolek", "role": "Extras Casting Assistant", "thumb": "" },
-        { "name": "Courtney Battles", "role": "Extras Casting Assistant", "thumb": "" }
+        {
+          "name": "Faith Maciolek",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Courtney Battles",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.hdtrailers_net/video/apple.com/http%3A%2F%2Fmovietrailers.apple.com%2Fmovies%2Fwb%2Fjoker%2Fjoker-teaser-1_h720p.mov",
       "languages": "English",
@@ -4918,7 +5218,10 @@
       },
       "userrating": 0,
       "top250": 0,
-      "set": { "name": "Teenage Mutant Ninja Turtles (Remake) Collection", "overview": "" },
+      "set": {
+        "name": "Teenage Mutant Ninja Turtles (Remake) Collection",
+        "overview": ""
+      },
       "plot": "When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.",
       "outline": "When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.",
       "tagline": "Mysterious. Dangerous. Reptilious. You've never seen heroes like this.",
@@ -4933,7 +5236,9 @@
         "http://assets.fanart.tv/fanart/movies/98566/movieposter/ninja-turtles-5405daf37e1e6.jpg",
         "http://assets.fanart.tv/fanart/movies/98566/hdmovielogo/ninja-turtles-5378936eb5831.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/v15nWBAM8wSal2oMQ3TThNMGoZZ.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/v15nWBAM8wSal2oMQ3TThNMGoZZ.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt1291150",
@@ -4948,7 +5253,12 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Science Fiction", "Action", "Adventure", "Comedy"],
-      "studio": ["Nickelodeon Movies", "Paramount", "Platinum Dunes", "Mirage Studios"],
+      "studio": [
+        "Nickelodeon Movies",
+        "Paramount",
+        "Platinum Dunes",
+        "Mirage Studios"
+      ],
       "credits": [
         "Kevin Eastman",
         "Peter Laird",
@@ -5213,7 +5523,9 @@
         "http://assets.fanart.tv/fanart/movies/602/movieposter/independence-day-526f91ea8a617.jpg",
         "http://assets.fanart.tv/fanart/movies/602/hdmovielogo/independence-day-528c63360b0cb.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/zUdNogYB7TKxQ8IxKkqRuZ9ycr7.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/zUdNogYB7TKxQ8IxKkqRuZ9ycr7.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt0116629",
@@ -5977,7 +6289,11 @@
           "thumb": "http://image.tmdb.org/t/p/h632/lO8HDHI3aVrpVubWb2DH1jeqM40.jpg"
         },
         { "name": "Ute Emmerich", "role": "Executive Producer", "thumb": "" },
-        { "name": "Kelly Van Horn", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Kelly Van Horn",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Wendy Kurtzman", "role": "Casting", "thumb": "" },
         {
           "name": "Richard Epcar",
@@ -5987,7 +6303,11 @@
         { "name": "Bernard Telsey", "role": "Local Casting", "thumb": "" },
         { "name": "William Fay", "role": "Executive Producer", "thumb": "" },
         { "name": "Peter Winther", "role": "Executive Producer", "thumb": "" },
-        { "name": "Jane Nerlinger Evans", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Jane Nerlinger Evans",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "Will Cantler", "role": "Local Casting", "thumb": "" },
         { "name": "Jacob F. Conrad", "role": "Location Manager", "thumb": "" },
         { "name": "Peggy Pridemore", "role": "Location Manager", "thumb": "" }
@@ -6053,7 +6373,9 @@
         "https://assets.fanart.tv/fanart/movies/11324/movieposter/shutter-island-57bdc586c62c3.jpg",
         "https://assets.fanart.tv/fanart/movies/11324/hdmovielogo/shutter-island-504f85b4e911a.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/9CgYUWtBmQzD8bkOHn14m7PcqFW.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/9CgYUWtBmQzD8bkOHn14m7PcqFW.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt1130884",
@@ -6068,7 +6390,12 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Drama", "Thriller", "Mystery"],
-      "studio": ["Phoenix Pictures", "Paramount", "Appian Way", "Sikelia Productions"],
+      "studio": [
+        "Phoenix Pictures",
+        "Paramount",
+        "Appian Way",
+        "Sikelia Productions"
+      ],
       "credits": ["Dennis Lehane", "Laeta Kalogridis"],
       "director": "Martin Scorsese",
       "tag": [
@@ -6311,7 +6638,9 @@
         "http://assets.fanart.tv/fanart/movies/399579/movieposter/alita-battle-angel-5cdacdb39694b.jpg",
         "http://assets.fanart.tv/fanart/movies/399579/hdmovielogo/alita-battle-angel-5a2b4c657debb.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/cnLztHqdz6CWFCpZ0OAWJzyGmK.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/cnLztHqdz6CWFCpZ0OAWJzyGmK.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt0437086",
@@ -6660,12 +6989,24 @@
         { "name": "Lavonna Cupid", "role": "Casting Associate", "thumb": "" },
         { "name": "Riva Cahn Thompson", "role": "Casting", "thumb": "" },
         { "name": "Bret Howe", "role": "Casting Associate", "thumb": "" },
-        { "name": "Emma Watts", "role": "Executive In Charge Of Production", "thumb": "" },
+        {
+          "name": "Emma Watts",
+          "role": "Executive In Charge Of Production",
+          "thumb": ""
+        },
         { "name": "Stacey Rice", "role": "Casting Associate", "thumb": "" },
-        { "name": "Iris S Moy Bautista", "role": "Extras Casting", "thumb": "" },
+        {
+          "name": "Iris S Moy Bautista",
+          "role": "Extras Casting",
+          "thumb": ""
+        },
         { "name": "Niamh Fleming", "role": "Extras Casting", "thumb": "" },
         { "name": "Kristi Kyle", "role": "Extras Casting", "thumb": "" },
-        { "name": "Ashley Harkrider", "role": "Extras Casting Assistant", "thumb": "" }
+        {
+          "name": "Ashley Harkrider",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=w7pYhpJaJW8",
       "languages": "English, Spanish",
@@ -6719,7 +7060,9 @@
       "tagline": "",
       "runtime": 95,
       "thumb": "http://image.tmdb.org/t/p/original/aw4GGsRwhQtyLsjzC7dsAahfCDY.jpg",
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/pHR4H6DsDYVjvO6G2rQ7NN7zxHW.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/pHR4H6DsDYVjvO6G2rQ7NN7zxHW.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt14465894",
@@ -6920,7 +7263,9 @@
       "tagline": "",
       "runtime": 110,
       "thumb": "http://image.tmdb.org/t/p/original/eEQvJerAVak8hWzSYKbvImQIZfu.jpg",
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/gkd9A6PKd3W4BryClsF4dcU7Qmq.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/gkd9A6PKd3W4BryClsF4dcU7Qmq.jpg"
+      },
       "mpaa": "",
       "certification": "",
       "id": "tt13086164",
@@ -6935,7 +7280,12 @@
       "playcount": "",
       "lastplayed": "",
       "genre": ["Action", "Fantasy", "Mystery"],
-      "studio": ["Climax Studios", "Studio Dragon", "CJ Entertainment", "KEYEAST"],
+      "studio": [
+        "Climax Studios",
+        "Studio Dragon",
+        "CJ Entertainment",
+        "KEYEAST"
+      ],
       "credits": ["Yeon Sang-ho", "Kim Yong-wan"],
       "director": "Kim Yong-wan",
       "tag": ["zombie", "based on tv series"],
@@ -7082,7 +7432,9 @@
         "http://assets.fanart.tv/fanart/movies/823625/moviethumb/blacklight-62050a9cbe59a.jpg",
         "http://assets.fanart.tv/fanart/movies/823625/hdmovielogo/blacklight-62050a2a57c92.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/tULzz524DuvMxnAuQJpo8dk0EvJ.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/tULzz524DuvMxnAuQJpo8dk0EvJ.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt14060094",
@@ -7258,7 +7610,9 @@
         "http://assets.fanart.tv/fanart/movies/550988/movieposter/free-guy-5f83114bcd0d1.jpg",
         "http://assets.fanart.tv/fanart/movies/550988/hdmovielogo/free-guy-5f824d7720909.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/lYrV9AMjiSxWJhw4H5TSfbeJjCM.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/lYrV9AMjiSxWJhw4H5TSfbeJjCM.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt6264654",
@@ -7740,13 +8094,21 @@
           "thumb": "http://image.tmdb.org/t/p/h632/1T24SiIIDMa9gAmq7QaYwZywq4y.jpg"
         },
         { "name": "Adam Kolbrenner", "role": "Producer", "thumb": "" },
-        { "name": "Daniel S. Levine", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Daniel S. Levine",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         { "name": "Sarah Schechter", "role": "Producer", "thumb": "" },
         { "name": "Angela Peri", "role": "Casting", "thumb": "" },
         { "name": "Mark Fitzgerald", "role": "Location Manager", "thumb": "" },
         { "name": "Scott Elias", "role": "Associate Producer", "thumb": "" },
         { "name": "Dan Cohen", "role": "Co-Producer", "thumb": "" },
-        { "name": "Douglas Cowell", "role": "Extras Casting Coordinator", "thumb": "" },
+        {
+          "name": "Douglas Cowell",
+          "role": "Extras Casting Coordinator",
+          "thumb": ""
+        },
         { "name": "Lisa Lobel", "role": "Casting", "thumb": "" },
         {
           "name": "Michael McGrath",
@@ -7819,7 +8181,9 @@
         "http://assets.fanart.tv/fanart/movies/297802/movieposter/aquaman-5be6ccbec238e.jpg",
         "http://assets.fanart.tv/fanart/movies/297802/hdmovielogo/aquaman-5be6d95804245.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/m96Q3udVkRiAB2HciP8MSYeo9Do.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/m96Q3udVkRiAB2HciP8MSYeo9Do.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt1477834",
@@ -8220,22 +8584,66 @@
           "role": "Location Manager",
           "thumb": "http://image.tmdb.org/t/p/h632/qNNp4wnRAPXfp8lM5PxTC2swFDM.jpg"
         },
-        { "name": "Bridgett Buss", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Bridgett Buss",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Morgan Robbins", "role": "Casting Associate", "thumb": "" },
         { "name": "Jeanette Benzie", "role": "Casting Associate", "thumb": "" },
-        { "name": "Maria Fiorito", "role": "Production Accountant", "thumb": "" },
-        { "name": "Kate Weatherly", "role": "Assistant Production Coordinator", "thumb": "" },
-        { "name": "Candice Preddy", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Maria Fiorito",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Kate Weatherly",
+          "role": "Assistant Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Candice Preddy",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Bud Hopes", "role": "Extras Casting", "thumb": "" },
-        { "name": "Angela Kenny", "role": "Production Accountant", "thumb": "" },
-        { "name": "Marlene Marks", "role": "First Assistant Accountant", "thumb": "" },
+        {
+          "name": "Angela Kenny",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Marlene Marks",
+          "role": "First Assistant Accountant",
+          "thumb": ""
+        },
         { "name": "Vivek Arora", "role": "Production Manager", "thumb": "" },
-        { "name": "Sharon Tribolet", "role": "Payroll Accountant", "thumb": "" },
+        {
+          "name": "Sharon Tribolet",
+          "role": "Payroll Accountant",
+          "thumb": ""
+        },
         { "name": "Hine Tuaeu", "role": "Payroll Accountant", "thumb": "" },
-        { "name": "Hajar Belkasmi", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Eleonora Spadaro", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Murray Alford", "role": "Production Secretary", "thumb": "" },
-        { "name": "Cathryn Hammond", "role": "Production Secretary", "thumb": "" },
+        {
+          "name": "Hajar Belkasmi",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Eleonora Spadaro",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Murray Alford",
+          "role": "Production Secretary",
+          "thumb": ""
+        },
+        {
+          "name": "Cathryn Hammond",
+          "role": "Production Secretary",
+          "thumb": ""
+        },
         { "name": "James Cowling", "role": "Travel Coordinator", "thumb": "" },
         { "name": "Matt Hughes", "role": "Production Accountant", "thumb": "" }
       ],
@@ -8324,7 +8732,9 @@
         "http://assets.fanart.tv/fanart/movies/284054/movieposter/black-panther-5cc6f464a7e2e.jpg",
         "http://assets.fanart.tv/fanart/movies/284054/hdmovielogo/black-panther-5a4eac543ba0d.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/i96ssa3qzjCldOfj6wag9mRfXZO.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/i96ssa3qzjCldOfj6wag9mRfXZO.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt1825683",
@@ -8340,7 +8750,13 @@
       "lastplayed": "",
       "genre": ["Action", "Adventure", "Science Fiction"],
       "studio": "Marvel Studios",
-      "credits": ["Stan Lee", "Jack Kirby", "Ryan Coogler", "Joe Robert Cole", "Simeon Wilkins"],
+      "credits": [
+        "Stan Lee",
+        "Jack Kirby",
+        "Ryan Coogler",
+        "Joe Robert Cole",
+        "Simeon Wilkins"
+      ],
       "director": "Ryan Coogler",
       "tag": [
         "africa",
@@ -8830,8 +9246,16 @@
           "role": "Producer",
           "thumb": "http://image.tmdb.org/t/p/h632/kCBqXZ5PT5udYGEj2wfTSFbLMvT.jpg"
         },
-        { "name": "Helen Pollak", "role": "Unit Production Manager", "thumb": "" },
-        { "name": "Jeffrey Chernov", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Helen Pollak",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Jeffrey Chernov",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         {
           "name": "Louis D'Esposito",
           "role": "Executive Producer",
@@ -8847,7 +9271,11 @@
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/d1BGeZT2b81Wa9gCOPdrXGWUtmR.jpg"
         },
-        { "name": "Scott Thaler", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Scott Thaler",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         {
           "name": "Charline St. Charles",
           "role": "Travel Coordinator",
@@ -8859,24 +9287,56 @@
           "thumb": "http://image.tmdb.org/t/p/h632/y6aSGvSXO4ZUyTMx04DXOXddJeg.jpg"
         },
         { "name": "Meagan Lewis", "role": "Local Casting", "thumb": "" },
-        { "name": "Douglas Dresser", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Douglas Dresser",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "David J. Grant", "role": "Producer", "thumb": "" },
         { "name": "Jason B. Stamey", "role": "Casting Associate", "thumb": "" },
         { "name": "Molly Doyle", "role": "Casting Associate", "thumb": "" },
-        { "name": "Nicholas A. Mudd", "role": "Casting Associate", "thumb": "" },
-        { "name": "Janine Schiro", "role": "First Assistant Accountant", "thumb": "" },
-        { "name": "Jason Zorigian", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Nicholas A. Mudd",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
+        {
+          "name": "Janine Schiro",
+          "role": "First Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Jason Zorigian",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "Cale Wilbanks", "role": "Researcher", "thumb": "" },
-        { "name": "Teodora Ilie", "role": "Assistant Production Manager", "thumb": "" },
+        {
+          "name": "Teodora Ilie",
+          "role": "Assistant Production Manager",
+          "thumb": ""
+        },
         { "name": "Tammy L. Smith", "role": "Extras Casting", "thumb": "" },
         { "name": "Diane Howard", "role": "Publicist", "thumb": "" },
-        { "name": "Mayur Dadarao Adhau", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Mayur Dadarao Adhau",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Ashish Kukian", "role": "Production Manager", "thumb": "" },
         { "name": "Stacy Parker", "role": "Travel Coordinator", "thumb": "" },
         { "name": "Matt Hughes", "role": "Production Accountant", "thumb": "" },
         { "name": "Deanna Greif", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Lathiem Groenmeyer", "role": "Production Manager", "thumb": "" },
-        { "name": "Amanda Lomonaco", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Lathiem Groenmeyer",
+          "role": "Production Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Amanda Lomonaco",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Sainath Shinde", "role": "Production Manager", "thumb": "" },
         { "name": "Jackie Bazan", "role": "Publicist", "thumb": "" },
         {
@@ -8884,16 +9344,44 @@
           "role": "Extras Casting Assistant",
           "thumb": "http://image.tmdb.org/t/p/h632/kWaSM7aX59I1hNNtYiLbGUORiQK.jpg"
         },
-        { "name": "Matthew Monaco", "role": "Production Accountant", "thumb": "" },
-        { "name": "Sara Bartkiewicz", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Matthew Monaco",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Sara Bartkiewicz",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Cody Kaylor", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Fabian Dash McIntosh", "role": "Extras Casting", "thumb": "" },
-        { "name": "Ashley R. Jackson", "role": "Extras Casting Assistant", "thumb": "" },
+        {
+          "name": "Fabian Dash McIntosh",
+          "role": "Extras Casting",
+          "thumb": ""
+        },
+        {
+          "name": "Ashley R. Jackson",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
         { "name": "Gayoung Kim", "role": "Production Accountant", "thumb": "" },
-        { "name": "Jamil Purnell", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Jamil Purnell",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Yeijin Cho", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Kelly Mokris", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Sydne Japtha", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Kelly Mokris",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Sydne Japtha",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Andrew Lee Ross", "role": "Production Manager", "thumb": "" }
       ],
       "trailer": "plugin://plugin.video.hdtrailers_net/video/apple.com/http%3A%2F%2Fmovietrailers.apple.com%2Fmovies%2Fmarvel%2Fblack-panther%2Fblack-panther-spot-rise-usca_h720p.mov",
@@ -8959,7 +9447,9 @@
         "http://assets.fanart.tv/fanart/movies/268896/movieposter/pacific-rim-2-5a6b4d8e59b33.jpg",
         "http://assets.fanart.tv/fanart/movies/268896/hdmovielogo/pacific-rim-2-5a918abeca63c.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/mLmfTDWwl5UAmyBqAKaSAu93AHx.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/mLmfTDWwl5UAmyBqAKaSAu93AHx.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt2557478",
@@ -9223,9 +9713,17 @@
           "thumb": "http://image.tmdb.org/t/p/h632/3153CfpgZQXTzCY0i74WpJumMQe.jpg"
         },
         { "name": "Kirsty McGregor", "role": "Casting Associate", "thumb": "" },
-        { "name": "Noelle Green", "role": "Executive In Charge Of Production", "thumb": "" },
+        {
+          "name": "Noelle Green",
+          "role": "Executive In Charge Of Production",
+          "thumb": ""
+        },
         { "name": "Femi Oguns", "role": "Producer", "thumb": "" },
-        { "name": "Allison Krumwiede", "role": "Art Department Production Assistant", "thumb": "" },
+        {
+          "name": "Allison Krumwiede",
+          "role": "Art Department Production Assistant",
+          "thumb": ""
+        },
         { "name": "Priyanka Sirpal", "role": "Other", "thumb": "" },
         { "name": "Julianna Politsky", "role": "Other", "thumb": "" },
         { "name": "Dave Sauro", "role": "Other", "thumb": "" },
@@ -9292,7 +9790,9 @@
         "http://assets.fanart.tv/fanart/movies/300681/movieposter/replicas-5cb055e479911.jpg",
         "http://assets.fanart.tv/fanart/movies/300681/hdmovielogo/replicas-5cb22fe2c6525.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/9gjvI20crsLvsmQ2DjvMIATnDHC.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/9gjvI20crsLvsmQ2DjvMIATnDHC.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt4154916",
@@ -9473,7 +9973,11 @@
         { "name": "Walter Josten", "role": "Executive Producer", "thumb": "" },
         { "name": "James Dodson", "role": "Executive Producer", "thumb": "" },
         { "name": "Jim Seibel", "role": "Executive Producer", "thumb": "" },
-        { "name": "Ines Mongil-Echandi", "role": "Production Manager", "thumb": "" },
+        {
+          "name": "Ines Mongil-Echandi",
+          "role": "Production Manager",
+          "thumb": ""
+        },
         {
           "name": "Mark Sussman",
           "role": "ADR Voice Casting",
@@ -9484,13 +9988,29 @@
         { "name": "Sherry Thomas", "role": "Casting", "thumb": "" },
         { "name": "Erik Howsam", "role": "Executive Producer", "thumb": "" },
         { "name": "Nik Bower", "role": "Executive Producer", "thumb": "" },
-        { "name": "Luis R. Estrella-Rivera", "role": "Location Manager", "thumb": "" },
+        {
+          "name": "Luis R. Estrella-Rivera",
+          "role": "Location Manager",
+          "thumb": ""
+        },
         { "name": "Ara Keshishian", "role": "Executive Producer", "thumb": "" },
         { "name": "Mark Gao", "role": "Producer", "thumb": "" },
         { "name": "Patty Connolly", "role": "ADR Voice Casting", "thumb": "" },
-        { "name": "Gregory Ouanhon", "role": "Executive Producer", "thumb": "" },
-        { "name": "Zoraida Sanjurjo López", "role": "Casting Director", "thumb": "" },
-        { "name": "Sebastian Boneta", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Gregory Ouanhon",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
+        {
+          "name": "Zoraida Sanjurjo López",
+          "role": "Casting Director",
+          "thumb": ""
+        },
+        {
+          "name": "Sebastian Boneta",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         { "name": "Luis A. Riefkohl", "role": "Producer", "thumb": "" },
         { "name": "Alyssa Morris", "role": "Casting Assistant", "thumb": "" },
         { "name": "Stacia Kimler", "role": "Casting Associate", "thumb": "" },
@@ -9547,7 +10067,9 @@
         "http://assets.fanart.tv/fanart/movies/19995/movieposter/avatar-52eed5d1081ae.jpg",
         "http://assets.fanart.tv/fanart/movies/19995/hdmovielogo/avatar-51290d0678d4e.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/wcC7kCICL6x6zHUlUyNp9pWoqW1.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/wcC7kCICL6x6zHUlUyNp9pWoqW1.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt0499549",
@@ -9847,43 +10369,99 @@
         { "name": "Peter M. Tobyansen", "role": "Line Producer", "thumb": "" },
         { "name": "Brooke Breton", "role": "Co-Producer", "thumb": "" },
         { "name": "Holly Dorff", "role": "ADR Voice Casting", "thumb": "" },
-        { "name": "Tim Patterson", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Tim Patterson",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Tom Greene", "role": "Production Assistant", "thumb": "" },
         { "name": "Inge Rademeyer", "role": "Travel Coordinator", "thumb": "" },
         { "name": "Miranda Rivers", "role": "Casting", "thumb": "" },
         { "name": "Hannah Clarke", "role": "Publicist", "thumb": "" },
         { "name": "Colin Wilson", "role": "Executive Producer", "thumb": "" },
-        { "name": "Annette Wullems", "role": "Production Manager", "thumb": "" },
-        { "name": "Andrew Cochrane", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Jennifer Teves", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Annette Wullems",
+          "role": "Production Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Andrew Cochrane",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Jennifer Teves",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "Brigitte Yorke", "role": "Production Manager", "thumb": "" },
         { "name": "Judy Alley", "role": "Publicist", "thumb": "" },
-        { "name": "Wendy Chesebrough Lowe", "role": "Post Production Coordinator", "thumb": "" },
+        {
+          "name": "Wendy Chesebrough Lowe",
+          "role": "Post Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Mika Saito", "role": "Production Supervisor", "thumb": "" },
-        { "name": "Barbara Szeman", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Barbara Szeman",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Tasha Lang", "role": "Production Assistant", "thumb": "" },
-        { "name": "Helene Takacs", "role": "Assistant Production Coordinator", "thumb": "" },
+        {
+          "name": "Helene Takacs",
+          "role": "Assistant Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Kimberly Graham", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Jamie Robinson", "role": "Production Coordinator", "thumb": "" },
-        { "name": "Susan Dukow", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Jamie Robinson",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Susan Dukow",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         {
           "name": "Johnny Gidcomb",
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/ojyjYRyRop9IKk4eXR3wwAJsgpd.jpg"
         },
         { "name": "Bill Whirity", "role": "Production Assistant", "thumb": "" },
-        { "name": "Maureen 'Mo' Crutchfield", "role": "Post Production Accountant", "thumb": "" },
+        {
+          "name": "Maureen 'Mo' Crutchfield",
+          "role": "Post Production Accountant",
+          "thumb": ""
+        },
         { "name": "Justine Hempe", "role": "Casting Associate", "thumb": "" },
-        { "name": "Troy McGatlin", "role": "Assistant Accountant", "thumb": "" },
+        {
+          "name": "Troy McGatlin",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
         { "name": "Lee Briggs", "role": "Production Assistant", "thumb": "" },
         { "name": "Sarah Goller", "role": "Production Assistant", "thumb": "" },
         { "name": "Chris Walker", "role": "Unit Manager", "thumb": "" },
         { "name": "Grant Roa", "role": "Producer's Assistant", "thumb": "" },
         { "name": "Robyn Isaacs", "role": "Publicist", "thumb": "" },
         { "name": "Boris Kunac", "role": "Unit Manager", "thumb": "" },
-        { "name": "Geoff Burdick", "role": "Executive In Charge Of Production", "thumb": "" },
-        { "name": "Dan Horton", "role": "Art Department Production Assistant", "thumb": "" },
-        { "name": "Francie McGirr", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Geoff Burdick",
+          "role": "Executive In Charge Of Production",
+          "thumb": ""
+        },
+        {
+          "name": "Dan Horton",
+          "role": "Art Department Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Francie McGirr",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Sally Ford", "role": "Production Assistant", "thumb": "" },
         { "name": "Jock Fyfe", "role": "Location Manager", "thumb": "" },
         { "name": "Kevin Magill", "role": "Location Assistant", "thumb": "" },
@@ -9892,49 +10470,145 @@
           "role": "Extras Casting Assistant",
           "thumb": "http://image.tmdb.org/t/p/h632/xvOQGmSbdtDqfjooe0J4TCAE1db.jpg"
         },
-        { "name": "Gillian Davies", "role": "Extras Casting Assistant", "thumb": "" },
+        {
+          "name": "Gillian Davies",
+          "role": "Extras Casting Assistant",
+          "thumb": ""
+        },
         { "name": "Ashley Slater", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Kristin Berbae", "role": "Producer's Assistant", "thumb": "" },
+        {
+          "name": "Kristin Berbae",
+          "role": "Producer's Assistant",
+          "thumb": ""
+        },
         { "name": "Ted Cahn", "role": "Producer's Assistant", "thumb": "" },
-        { "name": "Terri Depaolo", "role": "Producer's Assistant", "thumb": "" },
-        { "name": "Annette Encinas", "role": "Assistant Accountant", "thumb": "" },
+        {
+          "name": "Terri Depaolo",
+          "role": "Producer's Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Annette Encinas",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
         { "name": "Michael Ling", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Valerie Suarez", "role": "Assistant Accountant", "thumb": "" },
-        { "name": "Thea Govorko", "role": "Assistant Production Coordinator", "thumb": "" },
-        { "name": "Linus Murphy", "role": "First Assistant Accountant", "thumb": "" },
+        {
+          "name": "Valerie Suarez",
+          "role": "Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Thea Govorko",
+          "role": "Assistant Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Linus Murphy",
+          "role": "First Assistant Accountant",
+          "thumb": ""
+        },
         { "name": "Sebastian Marr", "role": "Payroll Accountant", "thumb": "" },
-        { "name": "Averil Mawhinney", "role": "Production Accountant", "thumb": "" },
-        { "name": "Alexander Hamilton Westmore", "role": "Production Assistant", "thumb": "" },
-        { "name": "Edward R. Apodaca", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Averil Mawhinney",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Alexander Hamilton Westmore",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Edward R. Apodaca",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         {
           "name": "Jamie Landau",
           "role": "Production Assistant",
           "thumb": "http://image.tmdb.org/t/p/h632/tmFawQ5z4ADaAqoAJOaVfDq0egd.jpg"
         },
         { "name": "Jenna Pitula", "role": "Production Assistant", "thumb": "" },
-        { "name": "Megan Fischer", "role": "Production Assistant", "thumb": "" },
-        { "name": "Michael Urbanski", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Megan Fischer",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Michael Urbanski",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Morgan Elam", "role": "Production Assistant", "thumb": "" },
         { "name": "Sara Docksey", "role": "Production Assistant", "thumb": "" },
-        { "name": "Andrew Emilio DeCesare", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Andrew Emilio DeCesare",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         {
           "name": "Michael Elko Weaver",
           "role": "Production Assistant",
           "thumb": "http://image.tmdb.org/t/p/h632/5e3aWAEEof72PwiyHvEysJk3fe5.jpg"
         },
         { "name": "Sherryn Hunt", "role": "Production Assistant", "thumb": "" },
-        { "name": "Edith Viramontes", "role": "Production Secretary", "thumb": "" },
-        { "name": "Anne Davenport", "role": "Second Assistant Accountant", "thumb": "" },
-        { "name": "Melissa Dodds", "role": "Production Assistant", "thumb": "" },
-        { "name": "Emily Sturrock", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Edith Viramontes",
+          "role": "Production Secretary",
+          "thumb": ""
+        },
+        {
+          "name": "Anne Davenport",
+          "role": "Second Assistant Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Melissa Dodds",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Emily Sturrock",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Grant Bensley", "role": "Production Manager", "thumb": "" },
-        { "name": "Michelle Turner", "role": "Production Manager", "thumb": "" },
-        { "name": "Charlotte Laney", "role": "Production Assistant", "thumb": "" },
-        { "name": "Clint Spillers", "role": "Production Assistant", "thumb": "" },
-        { "name": "Georgia Lovering", "role": "Production Assistant", "thumb": "" },
-        { "name": "Nicole Bossier", "role": "Production Assistant", "thumb": "" },
-        { "name": "Poppy Sinclair-Lockhart", "role": "Production Assistant", "thumb": "" },
-        { "name": "Scott Bachert", "role": "Production Assistant", "thumb": "" },
+        {
+          "name": "Michelle Turner",
+          "role": "Production Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Charlotte Laney",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Clint Spillers",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Georgia Lovering",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Nicole Bossier",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Poppy Sinclair-Lockhart",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
+        {
+          "name": "Scott Bachert",
+          "role": "Production Assistant",
+          "thumb": ""
+        },
         { "name": "Seb Abante", "role": "Production Assistant", "thumb": "" }
       ],
       "trailer": "plugin://plugin.video.youtube/?action=play_video&videoid=5PSNL1qE6VY",
@@ -10000,7 +10674,9 @@
         "http://assets.fanart.tv/fanart/movies/424783/movieposter/bumblebee-5bef84eccb2ca.jpg",
         "http://assets.fanart.tv/fanart/movies/424783/hdmovielogo/bumblebee-5b7006542f961.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/eAyrOEREZ915iibMbUeTJdS6OBJ.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/eAyrOEREZ915iibMbUeTJdS6OBJ.jpg"
+      },
       "mpaa": "US:PG-13 / US:Rated PG-13",
       "certification": "US:PG-13 / US:Rated PG-13",
       "id": "tt4701182",
@@ -10379,7 +11055,11 @@
           "role": "Producer",
           "thumb": "http://image.tmdb.org/t/p/h632/xX9mLKLbsnYhdRMrdpK2ULJIe0s.jpg"
         },
-        { "name": "Lorenzo Di Bonaventura", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Lorenzo Di Bonaventura",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         { "name": "Ruth Lambert", "role": "Casting", "thumb": "" },
         {
           "name": "Tom DeSanto",
@@ -10470,7 +11150,9 @@
         "http://assets.fanart.tv/fanart/movies/324857/movieposter/spider-man-into-the-spider-verse-5be49832cc2f4.jpg",
         "http://assets.fanart.tv/fanart/movies/324857/hdmovielogo/spider-man-into-the-spider-verse-5a59e4c641c88.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/8DpluQKl7e8v2A7flR1QLFrecnD.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/8DpluQKl7e8v2A7flR1QLFrecnD.jpg"
+      },
       "mpaa": "US:PG / US:Rated PG",
       "certification": "US:PG / US:Rated PG",
       "id": "tt4633694",
@@ -10515,7 +11197,12 @@
         "Jane Wu"
       ],
       "director": ["Rodney Rothman", "Peter Ramsey", "Bob Persichetti"],
-      "tag": ["superhero", "based on comic", "aftercreditsstinger", "alternate universe"],
+      "tag": [
+        "superhero",
+        "based on comic",
+        "aftercreditsstinger",
+        "alternate universe"
+      ],
       "actor": [
         {
           "name": "Shameik Moore",
@@ -11080,7 +11767,9 @@
         "http://assets.fanart.tv/fanart/movies/263115/movieposter/logan-584bab3c57edf.jpg",
         "http://assets.fanart.tv/fanart/movies/263115/hdmovielogo/logan-58b582e55f94f.png"
       ],
-      "fanart": { "thumb": "http://image.tmdb.org/t/p/original/45KTkpV6G3qfv0dQtj20cPZMCNY.jpg" },
+      "fanart": {
+        "thumb": "http://image.tmdb.org/t/p/original/45KTkpV6G3qfv0dQtj20cPZMCNY.jpg"
+      },
       "mpaa": "US:R / US:Rated R",
       "certification": "US:R / US:Rated R",
       "id": "tt3315342",
@@ -11704,7 +12393,11 @@
         { "name": "Lisa Beach", "role": "Casting", "thumb": "" },
         { "name": "Sarah Katzman", "role": "Casting", "thumb": "" },
         { "name": "Priscilla John", "role": "Casting", "thumb": "" },
-        { "name": "Joseph M. Caracciolo Jr.", "role": "Executive Producer", "thumb": "" },
+        {
+          "name": "Joseph M. Caracciolo Jr.",
+          "role": "Executive Producer",
+          "thumb": ""
+        },
         {
           "name": "Lauren Shuler Donner",
           "role": "Producer",
@@ -11725,7 +12418,11 @@
           "role": "Producer",
           "thumb": "http://image.tmdb.org/t/p/h632/3xvTvkIaKfU276cpajiAoGjvaaO.jpg"
         },
-        { "name": "Dana Robin", "role": "Unit Production Manager", "thumb": "" },
+        {
+          "name": "Dana Robin",
+          "role": "Unit Production Manager",
+          "thumb": ""
+        },
         { "name": "Hutch Parker", "role": "Producer", "thumb": "" },
         {
           "name": "Adam Stephenson",
@@ -11734,9 +12431,17 @@
         },
         { "name": "Sally Stiner", "role": "Casting", "thumb": "" },
         { "name": "Julianne Gabert", "role": "ADR Voice Casting", "thumb": "" },
-        { "name": "Dustin DellaVecchia", "role": "Assistant Production Coordinator", "thumb": "" },
+        {
+          "name": "Dustin DellaVecchia",
+          "role": "Assistant Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Elizabeth Coulon", "role": "Local Casting", "thumb": "" },
-        { "name": "Jessica Derhammer", "role": "Production Supervisor", "thumb": "" },
+        {
+          "name": "Jessica Derhammer",
+          "role": "Production Supervisor",
+          "thumb": ""
+        },
         { "name": "Kurt Williams", "role": "Co-Producer", "thumb": "" },
         { "name": "Sean J. Donnelly", "role": "Location Manager", "thumb": "" },
         { "name": "Barbie Block", "role": "Casting", "thumb": "" },
@@ -11746,24 +12451,64 @@
           "role": "Production Coordinator",
           "thumb": "http://image.tmdb.org/t/p/h632/xEmmDTLngXlCfSDBjNpOlWYbqw2.jpg"
         },
-        { "name": "Sherry Kecskes", "role": "Production Accountant", "thumb": "" },
-        { "name": "Kerri Smeltzer", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Sherry Kecskes",
+          "role": "Production Accountant",
+          "thumb": ""
+        },
+        {
+          "name": "Kerri Smeltzer",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         {
           "name": "Johnny Gidcomb",
           "role": "ADR Voice Casting",
           "thumb": "http://image.tmdb.org/t/p/h632/ojyjYRyRop9IKk4eXR3wwAJsgpd.jpg"
         },
-        { "name": "Francesca Bradley", "role": "Casting Associate", "thumb": "" },
-        { "name": "Amelia Chen Miley", "role": "Casting Associate", "thumb": "" },
-        { "name": "Brittany A. Jones", "role": "Casting Associate", "thumb": "" },
+        {
+          "name": "Francesca Bradley",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
+        {
+          "name": "Amelia Chen Miley",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
+        {
+          "name": "Brittany A. Jones",
+          "role": "Casting Associate",
+          "thumb": ""
+        },
         { "name": "Karlee Fomalont", "role": "Casting Associate", "thumb": "" },
-        { "name": "Rebecca Llorella", "role": "Casting Assistant", "thumb": "" },
+        {
+          "name": "Rebecca Llorella",
+          "role": "Casting Assistant",
+          "thumb": ""
+        },
         { "name": "Andreya Lynham", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Aurora Ann Quinones", "role": "Location Manager", "thumb": "" },
-        { "name": "Trang Dang", "role": "Assistant Production Coordinator", "thumb": "" },
-        { "name": "Bryan Schnitzer", "role": "Production Coordinator", "thumb": "" },
+        {
+          "name": "Aurora Ann Quinones",
+          "role": "Location Manager",
+          "thumb": ""
+        },
+        {
+          "name": "Trang Dang",
+          "role": "Assistant Production Coordinator",
+          "thumb": ""
+        },
+        {
+          "name": "Bryan Schnitzer",
+          "role": "Production Coordinator",
+          "thumb": ""
+        },
         { "name": "Rosemary Finney", "role": "Casting Assistant", "thumb": "" },
-        { "name": "Nicole Flowers", "role": "Production Accountant", "thumb": "" }
+        {
+          "name": "Nicole Flowers",
+          "role": "Production Accountant",
+          "thumb": ""
+        }
       ],
       "trailer": "plugin://plugin.video.hdtrailers_net/video/apple.com/http%3A%2F%2Fmovietrailers.apple.com%2Fmovies%2Ffox%2Flogan%2Flogan-big-game-spot_h720p.mov",
       "languages": "English, Spanish",
@@ -11782,7 +12527,11 @@
             { "codec": "FLAC", "language": "", "channels": 8 },
             { "codec": "AC3", "language": "eng", "channels": 2 }
           ],
-          "subtitle": [{ "language": "eng" }, { "language": "spa" }, { "language": "fra" }]
+          "subtitle": [
+            { "language": "eng" },
+            { "language": "spa" },
+            { "language": "fra" }
+          ]
         }
       },
       "source": "BLURAY",
