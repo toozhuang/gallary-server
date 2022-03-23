@@ -1,6 +1,6 @@
 import { join } from 'path';
 import * as fs from 'fs';
-import { INfometa } from '../../app/dto/movie.interface';
+import { INfometa } from '../../dto/movie.interface';
 
 /**
  * date: 2022-03-2, Wed, 21:23

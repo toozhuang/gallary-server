@@ -15,7 +15,7 @@ import * as fs from 'fs';
 import { XMLParser } from 'fast-xml-parser';
 import * as _ from 'lodash';
 
-import { INfometa } from './dto/movie.interface';
+import { INfometa } from '../dto/movie.interface';
 
 const { MovieDb } = require('moviedb-promise');
 
