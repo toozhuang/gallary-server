@@ -12,6 +12,8 @@ import { DbService } from './db.service';
 })
 export class DbModule {
   constructor(private dbService: DbService) {
-    dbService.init('./json-db/movieDatabase.json');
+    dbService.init(
+      '/Users/wang/Documents/GitHub/gallery-server/json-db/movieDatabase.json',
+    );
   }
 }

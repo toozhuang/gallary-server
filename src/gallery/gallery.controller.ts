@@ -14,26 +14,25 @@ export class GalleryController {
     private readonly readFileService: ReadFileService,
     private readonly galleryService: GalleryService,
     private readonly movieDbService: MovieService,
-    private readonly DbServices: DbService,
+    private readonly dbService: DbService,
   ) {
     // this.DbServices.generateDb('12315');
   }
 
   @Get('movie-folder/:id')
   async getMovieFolderDetail(@Param('id') movieId: string) {
-    const db = this.DbServices.get();
-    const value = db.get('movies').value();
-    console.log(value);
-    return 1;
-    // return this.movieDbService.batchFileFolderContent(movieId);
+    // const result = this.dbService.read();
+    // return result;
+    return this.movieDbService.batchFileFolderContent(movieId);
   }
 
   @Get('clean-up')
   async cleanUpFolder() {
     // this.DbServices.generateDb('aoaojiao');
+    return this.dbService.DB.data;
     // return 'aa';
-    const folder = '/Volumes/My Passport';
-    return this.movieDbService.cleanUpFolder(folder);
+    // const folder = '/Volumes/My Passport';
+    // return this.movieDbService.cleanUpFolder(folder);
   }
 
   /**

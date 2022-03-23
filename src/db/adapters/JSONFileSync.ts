@@ -5,7 +5,7 @@
  * 他是text file write 和 read 的包装
  * 读取和拿到的都是 基于 text 的 json 格式的数据
  */
-import { SyncAdapter } from '../Lowsync';
+import { SyncAdapter } from '../LowSync';
 import { TextFileSync } from './TextFileSync';
 
 export class JSONFileSync<T> implements SyncAdapter<T> {

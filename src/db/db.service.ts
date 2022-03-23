@@ -1,18 +1,25 @@
 import { Injectable } from '@nestjs/common';
-
-const Low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
+import { JSONFileSync } from './adapters/JSONFileSync';
+import { LowSync } from './LowSync';
 
 @Injectable()
 export class DbService {
-  private DB: any;
+  public DB: LowSync;
 
   public init(dbLocation: string) {
-    const adapter = new FileSync(dbLocation);
-    this.DB = new Low(adapter);
+    // adapter read write
+    const adapter = new JSONFileSync(dbLocation);
+    this.DB = new LowSync(adapter);
   }
 
-  public get() {
-    return this.DB;
+  public read() {
+    this.DB.read(); // 读取了以后， data存储在 this.DB 对象中了
+    return this.DB.data;
+  }
+
+  public write() {
+    // something
+    // todo: 后面这个 low sync 的逻辑是 db 是自己内部 class 控制
+    return this.DB.write();
   }
 }

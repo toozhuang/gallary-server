@@ -10,3 +10,10 @@ export class MovieException extends HttpException {
     super({ errorCode, errorMsg }, HttpStatus.OK); // STATUS OK 前端通过errocode 和 errormsg 来确定错误内容
   }
 }
+
+export class MissingAdapterError extends HttpException {
+  constructor(errorMsg: string) {
+    const errorCode = 110; // 110 是系统内部矛盾
+    super({ errorCode, errorMsg }, HttpStatus.OK); // STATUS OK 前端通过errocode 和 errormsg 来确定错误内容
+  }
+}

@@ -4,11 +4,13 @@
  * feature： 一个写入 string 方法（text 的 fs 包装器
  */
 
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+// import path from 'path';
+import * as path from 'path';
+import { join } from 'path';
 
 // lowdb libs
-import { SyncAdapter } from '../Lowsync';
+import { SyncAdapter } from '../LowSync';
 
 export class TextFileSync implements SyncAdapter<string> {
   #tempFilename: string;
@@ -34,16 +36,18 @@ export class TextFileSync implements SyncAdapter<string> {
    */
   read(): string | null {
     let data;
-
+    console.log('按理说是要过来 read了把？ ', this.#filename);
     try {
+      console.log(this.#filename);
       data = fs.readFileSync(this.#filename, 'utf-8');
     } catch (e) {
+      console.log('error: ');
       if ((e as NodeJS.ErrnoException).code === 'ENOENT') {
         return null;
       }
       throw e;
     }
-
+    console.log('是吗');
     return data;
   }
 
