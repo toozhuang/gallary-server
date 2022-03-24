@@ -4180,7 +4180,7 @@ mkdirp@^0.5.4:
 
 moviedb-promise@^3.1.13:
   version "3.1.13"
-  resolved "https://registry.npmjs.org/moviedb-promise/-/moviedb-promise-3.1.13.tgz"
+  resolved "https://registry.yarnpkg.com/moviedb-promise/-/moviedb-promise-3.1.13.tgz#c44355b22c0a2e7ea5339140d72dfd56cd89575e"
   integrity sha512-bsB8rsNftsscJegP3DKB7mG90vqG4F+Nvn4GuN7N/JPgODjEO9hAc4i/jcxc8Qr9qHHokTbqCuYt5x/1DbZzXg==
   dependencies:
     axios "^0.21.1"
