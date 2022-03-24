@@ -1,22 +1,22 @@
 import { Injectable } from '@nestjs/common';
 import { DbService } from '../db/db.service';
+import { Database } from '../dto/movieDB.types';
+import { MovieException } from '../common/exceptions/movie.exception';
 
 @Injectable()
 export class GalleryService {
   constructor(private dbService: DbService) {}
 
-  async allMovies() {
-    return this.dbService.getByKey('movies');
+  allMovies(): Database[] {
+    return this.dbService.getByKey<Database>('movies');
   }
 
-  async getMovieById(id: string): Promise<any | number> {
-    return 0;
-
-    // const database: IMovieDB = await this.db.OpenDB('movie', 1);
-    // const index = this.db.FindItem(database, id);
-    // if (index !== -1) {
-    //   return database.database[index];
-    // }
-    // return -1;
+  getMovieById(id: string) {
+    const result = this.dbService.getMovieFiledById(id);
+    if (result) {
+      return result;
+    } else {
+      throw new MovieException(404, 'not found');
+    }
   }
 }

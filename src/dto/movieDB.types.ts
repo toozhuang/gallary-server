@@ -3,10 +3,21 @@
 export type Movie = {
   createTime: string;
   movies: Database[];
+  version: VersionRecords[];
+};
+
+export type TimeRecords = {
+  id: string;
+  time: string;
+};
+
+export type VersionRecords = {
+  id: string;
   version: number;
 };
 
 export type Database = {
+  id: string;
   title: string;
   originaltitle: string;
   sorttitle: string;
@@ -24,7 +35,6 @@ export type Database = {
   fanart: Fanart;
   mpaa: string;
   certification: string;
-  id: string;
   tmdbid: number;
   tmdbCollectionId: string;
   uniqueid: Array<number | string>;

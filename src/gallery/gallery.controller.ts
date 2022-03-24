@@ -5,8 +5,6 @@ import { join } from 'path';
 import * as fs from 'fs';
 import { MovieService } from '../app/movie.service';
 import { GalleryService } from './gallery.service';
-import { MovieException } from '../common/exceptions/movie.exception';
-import { DbService } from '../db/db.service';
 
 @Controller('gallery')
 export class GalleryController {
@@ -56,15 +54,8 @@ export class GalleryController {
   }
 
   @Get(':id')
-  async getgalleryItem(@Param('id') id: string) {
-    const movie = await this.galleryService.getMovieById(id);
-    if (movie === -1) {
-      throw new MovieException(-4001, 'can not find this movie');
-    }
-    return {
-      code: 200,
-      data: movie,
-    };
+  async getGalleryItem(@Param('id') id: string) {
+    return this.galleryService.getMovieById(id);
   }
 
   @Get()
