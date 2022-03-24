@@ -1,13 +1,14 @@
 /**
  * date: 2022-02-28, Mon, 15:48
  * author: TooZhun9
- * feature： 项目启动的时候提供的 injectable 做的一些操作
+ * feature：想清楚这个做什么了， 这部分是和 open api 交互的 movie 信息
+ * 另一个 service 则是作为和 db 打交道的 service
  */
 import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import DB, { DBType } from '../common/db/json-db';
+import DB, { DBType } from '../../common/db/json-db';
 
-import { MovieException } from '../common/exceptions/movie.exception';
+import { MovieException } from '../../common/exceptions/movie.exception';
 import * as path from 'path';
 import { join } from 'path';
 import * as fs from 'fs';
@@ -15,7 +16,7 @@ import * as fs from 'fs';
 import { XMLParser } from 'fast-xml-parser';
 import * as _ from 'lodash';
 
-import { INfometa } from '../dto/movie.interface';
+import { INfometa } from '../../dto/movie.interface';
 
 const { MovieDb } = require('moviedb-promise');
 
