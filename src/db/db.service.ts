@@ -1,7 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { JSONFileSync } from './adapters/JSONFileSync';
 import { LowSync } from './LowSync';
-import { Movie } from '../dto/movieDB.types';
+import {
+  Database,
+  Movie,
+  TimeRecords,
+  VersionRecords,
+} from '../dto/movieDB.types';
+
+type Timo = TimeRecords | Database | VersionRecords;
+type ArrayTimo = Database | VersionRecords;
 
 @Injectable()
 export class DbService {
@@ -18,8 +26,25 @@ export class DbService {
    * key 为 该 json 文件的键值
    * @param key
    */
-  public getByKey(key: keyof Movie) {
+  public getByKey<T extends Timo>(key: string): T[] {
     return this.DB.data[key];
+  }
+
+  public getMovieFiledById(id: string): Database {
+    const result = this.getArrayFieldsById<Database>('movies', id);
+    if (result && result.length > 0) {
+      return result[0];
+    } else {
+      return null;
+    }
+  }
+
+  private getArrayFieldsById<T extends ArrayTimo>(
+    key: string,
+    id: string,
+  ): T[] {
+    console.log('id', id);
+    return this.DB.data[key].filter((item) => item.id === id);
   }
 
   public refreshDB() {
