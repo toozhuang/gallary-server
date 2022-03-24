@@ -4,7 +4,7 @@
  * feature： 同步 Adapter
  */
 
-import { MissingAdapterError } from '../common/exceptions/movie.exception';
+import { MissingAdapterError } from '../../common/exceptions/movie.exception';
 
 /**
  * 提供基础的 read 和 write 的功能

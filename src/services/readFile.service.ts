@@ -21,7 +21,9 @@ export class ReadFileService {
 
       const filesArray = await fs.promises.readdir(filePath);
       // 过滤所有的 json 文件
-      const jsonFiles = filesArray.filter((item) => path.extname(item) === '.json');
+      const jsonFiles = filesArray.filter(
+        (item) => path.extname(item) === '.json',
+      );
       const asrJsonArray = [];
       for (let index = 0; index < jsonFiles.length; index++) {
         const isValid = await this.validateJson(jsonFiles[index], filePath);
