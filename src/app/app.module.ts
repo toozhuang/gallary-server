@@ -5,13 +5,15 @@ import { GalleryModule } from '../gallery/gallery.module';
 import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import configuration from '../config/configuration';
-import { DbModule } from '../services/db/db.module';
 import { OpenMovieModule } from '../open-movie/open-movie.module';
+import { DbModule } from '../services/db/db.module';
+import { TmdbModule } from '../services/tmdb/tmdb.module';
 
 @Module({
   imports: [
     GalleryModule,
     OpenMovieModule,
+    TmdbModule,
     DbModule,
     //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
@@ -30,6 +32,4 @@ import { OpenMovieModule } from '../open-movie/open-movie.module';
   controllers: [AppController],
   providers: [ConfigService],
 })
-export class AppModule {
-  // constructor() {}
-}
+export class AppModule {}
