@@ -6,10 +6,12 @@ import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import configuration from '../config/configuration';
 import { DbModule } from '../services/db/db.module';
+import { OpenMovieModule } from '../open-movie/open-movie.module';
 
 @Module({
   imports: [
     GalleryModule,
+    OpenMovieModule,
     DbModule,
     //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
