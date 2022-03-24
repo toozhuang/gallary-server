@@ -1,9 +1,9 @@
 import { Controller, Get, Header, Param } from '@nestjs/common';
-import { ReadFileService } from './readFile.service';
+import { ReadFileService } from '../services/readFile.service';
 // import { Request } from 'express';
 import { join } from 'path';
 import * as fs from 'fs';
-import { MovieService } from '../app/movie.service';
+import { MovieService } from '../services/movie/movie.service';
 import { GalleryService } from './gallery.service';
 
 @Controller('gallery')
@@ -25,27 +25,8 @@ export class GalleryController {
 
   @Get('clean-up')
   async cleanUpFolder() {
-    // this.DbServices.generateDb('aoaojiao');
-    // const db = this.dbService.DB;
-    // this.dbService.DB.data ||= { posts: [] };
-    // const { posts } = db.data;
-    // posts.push({ title: 'lowdb' });
-    // this.dbService.write();
-    // return this.dbService.DB.data;
-    // return 'aa';
-    // const folder = '/Volumes/My Passport';
-    // return this.movieDbService.cleanUpFolder(folder);
-  }
-
-  /**
-   * TODO: 功能还远没完成
-   * @param folder
-   */
-  @Get('scanner')
-  @Header('content-type', 'application/json')
-  async scannerFolder(folder: string) {
-    folder = `/Volumes/My Passport`;
-    return this.movieDbService.scannerDb(folder, 'movie', 1);
+    const folder = '/Volumes/My Passport';
+    return this.movieDbService.cleanUpFolder(folder);
   }
 
   @Get('all')

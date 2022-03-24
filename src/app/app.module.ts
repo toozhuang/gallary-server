@@ -5,7 +5,7 @@ import { GalleryModule } from '../gallery/gallery.module';
 import { I18nJsonParser, I18nModule } from 'nestjs-i18n';
 import * as path from 'path';
 import configuration from '../config/configuration';
-import { DbModule } from '../db/db.module';
+import { DbModule } from '../services/db/db.module';
 
 @Module({
   imports: [

@@ -6,12 +6,12 @@ import {
 } from '@nestjs/common';
 import { GalleryService } from './gallery.service';
 import { GalleryController } from './gallery.controller';
-import { ReadFileService } from './readFile.service';
-import { MovieService } from '../app/movie.service';
+import { ReadFileService } from '../services/readFile.service';
+import { MovieService } from '../services/movie/movie.service';
 
-import { MoviedbConfigureMiddleware } from './moviedbConfigure.middleware';
+import { MoviedbConfigureMiddleware } from '../middlewares/moviedbConfigure.middleware';
 import { ConfigService } from '@nestjs/config';
-import { DbModule } from '../db/db.module';
+import { DbModule } from '../services/db/db.module';
 
 @Module({
   imports: [DbModule],

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { DbService } from '../db/db.service';
+import { DbService } from '../services/db/db.service';
 import { Database } from '../dto/movieDB.types';
 import { MovieException } from '../common/exceptions/movie.exception';
 

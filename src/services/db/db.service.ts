@@ -6,7 +6,7 @@ import {
   Movie,
   TimeRecords,
   VersionRecords,
-} from '../dto/movieDB.types';
+} from '../../dto/movieDB.types';
 
 type Timo = TimeRecords | Database | VersionRecords;
 type ArrayTimo = Database | VersionRecords;
