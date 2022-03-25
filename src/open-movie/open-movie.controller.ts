@@ -14,4 +14,10 @@ export class OpenMovieController {
   async searchMovieByName(@Body('name') movieName) {
     return this.openMovieService.searchMovie(movieName);
   }
+
+  @Post('create-movie')
+  createMovie(@Body('movieDetail') movie) {
+    console.log(movie);
+    return 'success';
+  }
 }
