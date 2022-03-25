@@ -8,6 +8,7 @@ import configuration from '../config/configuration';
 import { OpenMovieModule } from '../open-movie/open-movie.module';
 import { DbModule } from '../services/db/db.module';
 import { TmdbModule } from '../services/tmdb/tmdb.module';
+import { SettingModule } from '../setting/setting.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { TmdbModule } from '../services/tmdb/tmdb.module';
     OpenMovieModule,
     TmdbModule,
     DbModule,
+    SettingModule,
     //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
       isGlobal: true,

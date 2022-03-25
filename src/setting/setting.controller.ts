@@ -1,4 +1,10 @@
-import { Controller } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 
 @Controller('setting')
-export class SettingController {}
+export class SettingController {
+  @Post('create-movie')
+  createMovie(@Body('movieDetail') movie) {
+    console.log(movie);
+    return 'success';
+  }
+}
