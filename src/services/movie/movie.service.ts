@@ -19,6 +19,7 @@ import * as _ from 'lodash';
 import { INfometa } from '../../dto/movie.interface';
 
 const { MovieDb } = require('moviedb-promise');
+const short = require('short-uuid');
 
 @Injectable()
 export class MovieService {
@@ -165,7 +166,7 @@ export class MovieService {
       const moviesFolder = await fs.promises.readdir(folder, 'utf8');
 
       // return movieDb;
-
+      console.log(moviesFolder);
       // 对用户端的folder 进行扫描，并扫描结果对json文件进行更新
       for (let index = 0; index < moviesFolder.length; index++) {
         const movieFolder = moviesFolder[index];
@@ -175,6 +176,7 @@ export class MovieService {
             .lstatSync(path.join(folder, `/${movieFolder}`))
             .isDirectory();
           if (!isFolder) {
+            console.log('isFolder', movieFolder);
             noFolderList.push(movieFolder);
           }
         } catch (e) {}
@@ -188,9 +190,8 @@ export class MovieService {
         filteredFileNameList.push(fileName);
       }
     }
-
     for (let index = 0; index < filteredFileNameList.length; index++) {
-      await this.moveMovieToFolder(filteredFileNameList[index]);
+      await this.moveMovieToFolder(folder, filteredFileNameList[index]);
     }
     return {
       status: 200,
@@ -205,15 +206,23 @@ export class MovieService {
    * 来创建一个文件夹， 并把该电影 move 进去
    * @param movieName
    */
-  async moveMovieToFolder(movieName: string) {
+  async moveMovieToFolder(folder: string, movieName: string) {
     const nameIndex = movieName.split('.').length;
     const newArray = movieName
       .split('.')
       .slice(0, nameIndex - 2)
       .join('.');
-    const folder = '/Volumes/My Passport';
-    const folderDestination =
-      folder + '/' + newArray.replace('[', '').replace(']', '');
+    // const folder = '/Volumes/My Passport';
+    const newName = newArray
+      .replaceAll('[', '')
+      .replaceAll(']', '')
+      .replaceAll('.', '-');
+
+    const folderDestination = folder + '/' + newName.slice(0, 28);
+
+    // short.generate();
+    // 更新为使用 uuid 来命名 更安全
+    // newArray.replace('[', '').replace(']', '');
     // 创建该文件夹
     // 必须要无 [ 或者 ]
     // 需要对 movie name 做一个 regex的 过滤

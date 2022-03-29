@@ -25,7 +25,9 @@ export class GalleryController {
 
   @Get('clean-up')
   async cleanUpFolder() {
-    const folder = '/Volumes/My Passport';
+    // const folder = '/Volumes/My Passport';
+    const folder = '/Users/wang/Downloads/Movies';
+    // console.log('来了吧',folder)
     return this.movieDbService.cleanUpFolder(folder);
   }
 
