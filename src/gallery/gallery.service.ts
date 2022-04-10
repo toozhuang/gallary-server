@@ -7,14 +7,19 @@ import { MovieException } from '../common/exceptions/movie.exception';
 export class GalleryService {
   constructor(private dbService: DbService) {}
 
-  allMovies(): Database[] {
-    return this.dbService.getByKey<Database>('movies');
+  allMovies() {
+    const movieList: Database[] = this.dbService.getByKey<Database>('movies');
+    return {
+      createTime: new Date(),
+      version: new Date(),
+      database: movieList,
+    };
   }
 
   getMovieById(id: string) {
     const result = this.dbService.getMovieFiledById(id);
     if (result) {
-      return result;
+      return { data: result };
     } else {
       throw new MovieException(404, 'not found');
     }
