@@ -1,8 +1,9 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Get } from '@nestjs/common';
 
-@Controller()
+@Controller('')
 export class AppController {
-  // constructor() {}
-  // @Get()
-  // haha() {}
+  @Get('')
+  async galleryAll() {
+    return 'aoaoatest';
+  }
 }

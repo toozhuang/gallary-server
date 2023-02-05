@@ -9,13 +9,26 @@ import { OpenMovieModule } from '../open-movie/open-movie.module';
 import { DbModule } from '../services/db/db.module';
 import { TmdbModule } from '../services/tmdb/tmdb.module';
 import { SettingModule } from '../setting/setting.module';
+import { ToshlModule } from '../toshl/toshl.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'wang',
+      password: 'wang',
+      database: 'wang-box',
+      autoLoadEntities: true,
+      synchronize: false,
+    }),
     GalleryModule,
     OpenMovieModule,
     TmdbModule,
     DbModule,
+    ToshlModule,
     SettingModule,
     //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
