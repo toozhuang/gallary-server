@@ -33,6 +33,7 @@
     "@nestjs/config": "^1.2.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/swagger": "^6.2.1",
     "@nestjs/typeorm": "^9.0.1",
     "@types/lodash": "^4.14.179",
     "fast-xml-parser": "^4.0.3",
