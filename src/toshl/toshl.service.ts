@@ -1,4 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import {
+  HttpException,
+  HttpStatus,
+  Injectable,
+  UnprocessableEntityException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ToshlEntity } from './toshl.entity';
 import { Repository } from 'typeorm';
@@ -6,6 +11,7 @@ import { ToshlRecord } from '../dto/toshlRecord';
 import { ToshlCategory } from '../dto/toshlCategory';
 import { CategoryEntity } from './entities/toshlCategory.entity';
 import * as console from 'console';
+import { ValidationPayloadInterface } from '../common/interfacts/validation-error.interfact';
 
 const short = require('short-uuid');
 
@@ -36,14 +42,28 @@ export class ToshlService {
     });
   }
 
-  insertCategory(toshlCategory: ToshlCategory) {
-    return this.categoryRepository.save({
-      id: short().new(),
-      name: toshlCategory.name,
-      name_override: toshlCategory.name_override,
-      modified: toshlCategory.modified,
-      type: toshlCategory.type,
-      deleted: toshlCategory.deleted,
+  async insertCategory(toshlCategory: ToshlCategory) {
+    const category = await this.categoryRepository.findOne({
+      where: {
+        name: toshlCategory.name,
+      },
     });
+    const errorPayload: ValidationPayloadInterface[] = [];
+    if (category) {
+      errorPayload.push({
+        property: 'name',
+        message: ['alreadyExist'],
+      });
+      throw new UnprocessableEntityException(errorPayload);
+    } else {
+      return this.categoryRepository.save({
+        id: short().new(),
+        name: toshlCategory.name,
+        name_override: toshlCategory.name_override,
+        modified: toshlCategory.modified,
+        type: toshlCategory.type,
+        deleted: toshlCategory.deleted,
+      });
+    }
   }
 }
