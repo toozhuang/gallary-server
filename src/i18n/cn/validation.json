@@ -1,0 +1,4 @@
+{
+  "alreadyTaken": "$t(app.{property}) is already taken",
+  "alreadyExist": "$t(app.{property}) is already exist"
+}
