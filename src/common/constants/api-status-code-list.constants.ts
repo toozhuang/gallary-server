@@ -1,0 +1,27 @@
+/**
+ * date: 2023-02-13, Mon, 21:42
+ * author: Wang
+ * feature： 返回我们的 API 中的错误代码，
+ * 这个主要是和我们的一些service 中的exception的错误码进行联动和翻译
+ */
+export const ApiStatusCodeListConstants = {
+  Success: 1001,
+  ValidationError: 1002,
+  InternalServerError: 1003,
+  NotFound: 1004,
+  UnauthorizedAccess: 1005,
+  TokenExpired: 1006,
+  TooManyTries: 1007,
+  ServiceUnAvailable: 1008,
+  ThrottleError: 1009,
+  Forbidden: 1010,
+  IncorrectOldPassword: 1011,
+  UserInactive: 1012,
+  BadRequest: 1013,
+  InvalidCredentials: 1014,
+  InvalidRefreshToken: 1015,
+  UnsupportedFileType: 1016,
+  OtpRequired: 1017,
+  DeleteDefaultError: 1018,
+  RefreshTokenExpired: 1019,
+} as const;
