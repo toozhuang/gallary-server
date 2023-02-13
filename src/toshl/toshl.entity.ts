@@ -6,6 +6,9 @@ export class ToshlEntity {
   id: number;
 
   @Column()
+  spendingAmount: number;
+
+  @Column()
   date: string;
 
   @Column()
@@ -13,4 +16,7 @@ export class ToshlEntity {
 
   @Column()
   category: string;
+
+  @Column()
+  tag: string;
 }
