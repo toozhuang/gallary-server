@@ -9,18 +9,19 @@ import {
   ExceptionFilter,
   HttpException,
   HttpStatus,
+  Inject,
 } from '@nestjs/common';
 import { Response } from 'express';
 import { I18nService } from 'nestjs-i18n';
 import { ApiStatusCodeListConstants } from '../constants/api-status-code-list.constants';
 import { ValidationErrorInterface } from '../interfacts/validation-error.interfact';
+import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
+import { Logger } from 'winston';
 
 @Catch(HttpException)
 export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
   constructor(
-    // todo： 暂时先不用 logger， 估计要明天才有时间添加logger了
-    // 明天的日期是 2023-02-14, Tue, 21:11
-    // @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
     private readonly i18n: I18nService,
   ) {}
   /**
@@ -63,12 +64,11 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
       }
       return exceptionResponse;
     } catch (error) {
-      // TODO: 需要添加 logger
-      // this.logger.error('Error in I18nExceptionFilterPipe: ', {
-      //   meta: {
-      //     error,
-      //   },
-      // });
+      this.logger.error('Error in I18n Exception Filter ', {
+        meta: {
+          error,
+        },
+      });
     }
   }
 
@@ -84,8 +84,11 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
           });
         }),
       ).catch((e) => {
-        console.log('e: ', e);
-        // todo: 需要在这里捕捉一下 i18n 可能出现的错误
+        this.logger.error('Error in I18n Exception Filter: translateArray ', {
+          meta: {
+            error: e,
+          },
+        });
       });
 
       translatedErrors.push({

@@ -43,12 +43,14 @@
     "lodash": "^4.17.21",
     "moviedb-promise": "^3.1.13",
     "mysql2": "^2.3.3",
+    "nest-winston": "^1.8.0",
     "nestjs-i18n": "^8.2.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
     "short-uuid": "^4.2.0",
-    "typeorm": "^0.3.11"
+    "typeorm": "^0.3.11",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",

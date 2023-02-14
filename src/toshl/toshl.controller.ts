@@ -1,12 +1,16 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Inject, Post } from '@nestjs/common';
 import { ToshlService } from './toshl.service';
 import { ToshlRecord } from '../dto/toshlRecord';
-import { ApiBody } from '@nestjs/swagger';
 import { ToshlCategory } from '../dto/toshlCategory';
+import { error, Logger } from 'winston';
+import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
 
 @Controller('toshl')
 export class ToshlController {
-  constructor(private readonly toshlService: ToshlService) {}
+  constructor(
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
+    private readonly toshlService: ToshlService,
+  ) {}
 
   @Get()
   async galleryAll() {
@@ -18,9 +22,6 @@ export class ToshlController {
     return this.toshlService.insertOne(toshl);
   }
 
-  // 导入的方法， 用来导入json数据， 插入到对应的数据库表中去
-  // Note， 但是想了又想， 还是先把创建做出来，
-  // 导入这种到最后再去实现可能性价比更高
   // {
   //     "id": "72191304",
   //     "name": "菜场",
@@ -33,7 +34,6 @@ export class ToshlController {
   // }
   @Post('category')
   async insertCategory(@Body() toshlCategory: ToshlCategory) {
-    console.log('toshl: ', toshlCategory);
     return this.toshlService.insertCategory(toshlCategory);
   }
 }

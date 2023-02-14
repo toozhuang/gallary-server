@@ -19,6 +19,7 @@ import { ToshlModule } from '../toshl/toshl.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { APP_FILTER } from '@nestjs/core';
 import { I18nExceptionFilter } from '../common/filters/i18n-exception-fitler';
+import { LoggingModule } from '../logging/logging.module';
 
 @Module({
   imports: [
@@ -36,21 +37,14 @@ import { I18nExceptionFilter } from '../common/filters/i18n-exception-fitler';
     OpenMovieModule,
     TmdbModule,
     DbModule,
+    LoggingModule,
     ToshlModule,
     SettingModule,
-    //   todo: 要设置 logger service 才好
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ['.env.development'], // 替换 '.env.prod'
       load: [configuration],
     }),
-    // I18nModule.forRoot({
-    //   fallbackLanguage: 'cn',
-    //   parser: I18nJsonParser,
-    //   parserOptions: {
-    //     path: path.join(__dirname, '../i18n/'),
-    //   },
-    // }),
     I18nModule.forRootAsync({
       useFactory: () => ({
         fallbackLanguage: 'cn', //appConfig.fallbackLanguage
