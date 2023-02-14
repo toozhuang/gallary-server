@@ -53,12 +53,8 @@ export class ToshlService {
       throw new UnprocessableEntityException(errorPayload);
     } else {
       return this.categoryRepository.save({
+        ...toshlCategory,
         id: short().new(),
-        name: toshlCategory.name,
-        name_override: toshlCategory.name_override,
-        modified: toshlCategory.modified,
-        type: toshlCategory.type,
-        deleted: toshlCategory.deleted,
       });
     }
   }

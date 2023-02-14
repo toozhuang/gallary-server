@@ -11,7 +11,6 @@ import {
   HttpStatus,
   Inject,
 } from '@nestjs/common';
-import { Response } from 'express';
 import { I18nService } from 'nestjs-i18n';
 import { ApiStatusCodeListConstants } from '../constants/api-status-code-list.constants';
 import { ValidationErrorInterface } from '../interfacts/validation-error.interfact';
@@ -46,6 +45,8 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
   async getMessage(exception: HttpException, lang: string) {
     try {
       const exceptionResponse = exception.getResponse() as any;
+      //  Class Validator 的错误也会到这里来，
+      // 所以后续可以考虑在这里也进行一次 transform
       if (!exceptionResponse.message && typeof exceptionResponse === 'string') {
         return await this.i18n.translate(`validation.${exceptionResponse}`, {
           lang,
@@ -73,7 +74,7 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
   }
 
   async translateArray(errors: any[], lang: string) {
-    const translatedErrors: ValidationErrorInterface[] = [];
+    let translatedErrors: ValidationErrorInterface[] = [];
     for (const error of errors) {
       const messageArray = error.message;
       const message = await Promise.all(
@@ -91,10 +92,13 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
         });
       });
 
-      translatedErrors.push({
-        name: error.property,
-        errors: message || messageArray,
-      });
+      // translatedErrors.push({
+      //   name: error.property,
+      //   errors: message || messageArray,
+      // });
+      // note: remove 上面的部分， 用下面部分，保持整个exception系统一致
+      // concat translatedErrors and message
+      translatedErrors = message || messageArray;
     }
     return translatedErrors;
   }
