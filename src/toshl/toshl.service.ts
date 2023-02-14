@@ -1,9 +1,4 @@
-import {
-  HttpException,
-  HttpStatus,
-  Injectable,
-  UnprocessableEntityException,
-} from '@nestjs/common';
+import { Injectable, UnprocessableEntityException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ToshlEntity } from './toshl.entity';
 import { Repository } from 'typeorm';
@@ -12,6 +7,7 @@ import { ToshlCategory } from '../dto/toshlCategory';
 import { CategoryEntity } from './entities/toshlCategory.entity';
 import * as console from 'console';
 import { ValidationPayloadInterface } from '../common/interfacts/validation-error.interfact';
+import { isEmpty } from 'lodash';
 
 const short = require('short-uuid');
 
@@ -43,13 +39,13 @@ export class ToshlService {
   }
 
   async insertCategory(toshlCategory: ToshlCategory) {
-    const category = await this.categoryRepository.findOne({
+    const category = await this.categoryRepository.find({
       where: {
         name: toshlCategory.name,
       },
     });
     const errorPayload: ValidationPayloadInterface[] = [];
-    if (category) {
+    if (!isEmpty(category)) {
       errorPayload.push({
         property: 'name',
         message: ['alreadyExist'],
