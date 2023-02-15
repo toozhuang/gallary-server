@@ -38,6 +38,10 @@ export class ToshlService {
     });
   }
 
+  /**
+   * 创建一个新的分类
+   * @param toshlCategory
+   */
   async insertCategory(toshlCategory: ToshlCategory) {
     const category = await this.categoryRepository.find({
       where: {
