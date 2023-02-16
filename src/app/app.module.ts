@@ -25,7 +25,7 @@ import { LoggingModule } from '../logging/logging.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'host.docker.internal',
       port: 3306,
       username: 'wang',
       password: 'wang',
