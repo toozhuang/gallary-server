@@ -20,18 +20,21 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { APP_FILTER } from '@nestjs/core';
 import { I18nExceptionFilter } from '../common/filters/i18n-exception-fitler';
 import { LoggingModule } from '../logging/logging.module';
+import { ormConfig } from '../config/ormconfig';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'host.docker.internal',
-      port: 3306,
-      username: 'wang',
-      password: 'wang',
-      database: 'wang-box',
-      autoLoadEntities: true,
-      synchronize: false,
+    // 全局载入环境变量相关的配置
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env.development'], // 替换 '.env.prod'
+      load: [configuration],
+    }),
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configureService: ConfigService) =>
+        ormConfig(configureService),
     }),
     GalleryModule,
     OpenMovieModule,
@@ -40,19 +43,23 @@ import { LoggingModule } from '../logging/logging.module';
     LoggingModule,
     ToshlModule,
     SettingModule,
-    ConfigModule.forRoot({
-      isGlobal: true,
-      envFilePath: ['.env.development'], // 替换 '.env.prod'
-      load: [configuration],
-    }),
     I18nModule.forRootAsync({
-      useFactory: () => ({
-        fallbackLanguage: 'cn', //appConfig.fallbackLanguage
-        parserOptions: {
-          path: path.join(__dirname, '../i18n/'),
-          watch: true,
-        },
-      }),
+      imports: [ConfigModule],
+      inject: [ConfigService], //把 configService inject 到 factory 中
+      useFactory: (i18nService: ConfigService) => {
+        console.log(
+          '我算是过来了',
+
+          `${i18nService.get('db.mongodb.url')}`,
+        );
+        return {
+          fallbackLanguage: 'cn', //appConfig.fallbackLanguage
+          parserOptions: {
+            path: path.join(__dirname, '../i18n/'),
+            watch: true,
+          },
+        };
+      },
       parser: I18nJsonParser,
       resolvers: [
         {

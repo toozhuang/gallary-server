@@ -1,9 +1,10 @@
 /**
  * date: 2023-02-14, Tue, 10:2
  * author: Wang
- * feature： 专门处理日志实务的module
+ * feature： 专门处理日志实务的module, 但后续可以尝试把logger的配置信息放到config中，
+ * 然后通过isProduct来决定是否上传到aws的cloud watch去
  */
-import { Logger, LoggerService, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { WinstonModule } from 'nest-winston';
 import * as winston from 'winston';
 
