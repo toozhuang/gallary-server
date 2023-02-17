@@ -21,13 +21,14 @@ import { APP_FILTER } from '@nestjs/core';
 import { I18nExceptionFilter } from '../common/filters/i18n-exception-fitler';
 import { LoggingModule } from '../logging/logging.module';
 import { ormConfig } from '../config/ormconfig';
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
   imports: [
     // 全局载入环境变量相关的配置
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: ['.env.development'], // 替换 '.env.prod'
+      envFilePath: ['.env.development'], // 替换 '.env.prod' 这个地方载入的时候， 是可以直接通过 process.env 来获取的
       load: [configuration],
     }),
     TypeOrmModule.forRootAsync({
@@ -36,6 +37,7 @@ import { ormConfig } from '../config/ormconfig';
       useFactory: (configureService: ConfigService) =>
         ormConfig(configureService),
     }),
+    AuthModule,
     GalleryModule,
     OpenMovieModule,
     TmdbModule,
@@ -47,11 +49,12 @@ import { ormConfig } from '../config/ormconfig';
       imports: [ConfigModule],
       inject: [ConfigService], //把 configService inject 到 factory 中
       useFactory: (i18nService: ConfigService) => {
-        console.log(
-          '我算是过来了',
-
-          `${i18nService.get('db.mongodb.url')}`,
-        );
+        // console.log(
+        //   '我算是过来了',
+        //   process.env.description, // 这个就是上面配的， 环境变量的获取
+        //   '妈妈',
+        //   // `${i18nService.get('db.mongodb.url')}`,
+        // );
         return {
           fallbackLanguage: 'cn', //appConfig.fallbackLanguage
           parserOptions: {

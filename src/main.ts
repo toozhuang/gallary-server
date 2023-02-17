@@ -15,6 +15,8 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
+  // 激活全局的 validate pipe
+  // 可以和我们的 class validator 一起使用
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors({
     origin: ['https://www.wang.today', 'http://localhost:3000'],

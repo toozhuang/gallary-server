@@ -1,3 +1,8 @@
+/**
+ * date: 2023-02-17, Fri, 15:24
+ * author: Wang
+ * feature： 可以用来读取上传文件信息的中间层
+ */
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import * as fs from 'fs';
 import { join } from 'path';

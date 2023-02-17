@@ -2,31 +2,31 @@
  * date: 2023-02-17, Fri, 11:5
  * author: Wang
  * feature： typOrm 数据库操作lib 的配置信息
- * {
- *       type: 'mysql',
- *       host: 'localhost',
- *       // host.docker.internal
- *       port: 3306,
- *       username: 'wang',
- *       password: 'wang',
- *       database: 'wang-box',
- *       autoLoadEntities: true,
- *       synchronize: false,
- *     }
  */
+import { ConfigService } from '@nestjs/config';
 
-export const ormConfig = (configureService: any): any => {
+export const ormConfig = (configureService: ConfigService): any => {
   return {
-    type: 'mysql',
-    host: 'localhost',
-    // host.docker.internal
-    port: 3306,
-    username: 'wang',
-    password: 'wang',
-    database: 'wang-box',
+    type: configureService.get('db.type'),
+    host: configureService.get('db.host'),
+    port: configureService.get('db.port'),
+    username: configureService.get('db.username'),
+    password: configureService.get('db.password'),
     autoLoadEntities: true,
     synchronize: false,
   };
+};
+
+/**
+ * postgres 数据库配置
+ */
+const demoPostgres = {
+  type: 'postgres',
+  host: 'localhost',
+  port: 5432,
+  username: 'postgres',
+  password: 'root',
+  synchronize: false,
 };
 
 /**

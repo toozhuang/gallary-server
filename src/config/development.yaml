@@ -1,14 +1,19 @@
 # 全局用来控制的一些信息配置， 当前只有 db 和 jwt 两个配置
 # db 用来配置数据库连接信息
 db:
+  #host: host.docker.internal
   host: 'localhost'
   type: 'postgres'
   port: 5432
   username: 'postgres'
   password: 'root'
-  synchronize: false
 # jwt 用来配置 jwt 的 secret
 jwt:
   secret: 'password@123'
+
+movie:
+  api_key: '8f54beed88428126789cc1654fe73bf2'
+  db_location: '/Users/wang/Documents/GitHub/gallery-server/json-db/movie.json'
+
 
 

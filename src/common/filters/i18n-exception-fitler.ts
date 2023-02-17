@@ -25,6 +25,7 @@ export class I18nExceptionFilter implements ExceptionFilter<HttpException> {
   ) {}
   /**
    * 重写我们的http 异常过滤器方法
+   * 注意，所有的异常都会走到这个里面来
    * @param exception
    * @param host
    */
