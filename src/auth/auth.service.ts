@@ -1,7 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { ObjectLiteral, Repository } from 'typeorm';
-import { UserEntity } from './entities/user.entity';
+import { DeepPartial, ObjectLiteral, Repository } from 'typeorm';
+import { UserEntity, UserStatusEnum } from './entities/user.entity';
+
+import { Logger } from 'winston';
+import { WINSTON_MODULE_PROVIDER } from 'nest-winston';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class AuthService {
@@ -10,16 +14,38 @@ export class AuthService {
   constructor(
     @InjectRepository(UserEntity)
     private readonly userRepository: Repository<UserEntity>,
+    @Inject(WINSTON_MODULE_PROVIDER) private readonly logger: Logger,
   ) {}
 
-  async create(registerUserDto: any): Promise<any> {
+  async create(registerUserDto: DeepPartial<UserEntity>): Promise<any> {
     const token = await this.generateToken(12);
-    return token;
+
+    // 我们默认创建的user都是普通用户
+    registerUserDto.roleId = 2;
+    const currentDateTIme = new Date();
+    // currentDateTIme.setHours(currentDateTIme.getHours() + 2); // 该用户两小时内有效（ validate
+    // registerUserDto.tokenValidityDate = currentDateTIme;
+    // todo: 暂时还不启用 email 激活的功能， 手动赋予该用户两年内有效（ validate
+    currentDateTIme.setFullYear(currentDateTIme.getFullYear() + 2);
+    registerUserDto.tokenValidityDate = currentDateTIme;
+
+    // const registerProcess = !registerUserDto.status;
+    //
+    // if (!registerUserDto.status) {
+    //   registerUserDto.status = UserStatusEnum.INACTIVE;
+    // }
+    registerUserDto.status = UserStatusEnum.ACTIVE;
+    registerUserDto.salt = await bcrypt.genSalt();
+    registerUserDto.token = token;
+    const user = this.userRepository.create(registerUserDto);
+    const result = await user.save();
+    console.log(result);
+    return user;
   }
 
   /**
-   * 创建一个唯一的token， 作用是后续发送邮件的时候， 用来验证用户的身份
-   * 小小的使用了一下递归方法，
+   * 创建一个唯一的token， 由于有可能会在之前已经具有了相同的token了
+   * 所以采用了递归的方法，来创建一个完全不存在的token 小小的使用了一下递归方法，
    * @param number
    * @private
    */
@@ -32,6 +58,7 @@ export class AuthService {
       },
     });
     if (tokenCount.length > 0) {
+      this.logger.info('token already exist, generate again');
       await this.generateToken(number);
     }
     return token;
