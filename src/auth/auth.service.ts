@@ -44,6 +44,36 @@ export class AuthService {
   }
 
   /**
+   * 用户登录， 传入 login 信息 和 前端的 req 等信息（浏览器之类的）
+   * 加一起创建一个cookie
+   * @param loginUserDto
+   * @param refreshTokenPayload
+   */
+  async login(
+    loginUserDto: DeepPartial<UserEntity>,
+    refreshTokenPayload: any,
+  ): Promise<any> {
+    const { username, password } = loginUserDto;
+    const user = await this.userRepository.findOne({
+      where: [
+        {
+          username: username,
+        },
+        {
+          email: username,
+        },
+      ],
+    });
+    if (user && (await user.validatePassword(password))) {
+      if (user.status !== UserStatusEnum.ACTIVE) {
+        return [null, 'UserInactive', 400];
+      }
+      return [user, null, null];
+    }
+    return [null, 'InvalidCredentials', 400];
+  }
+
+  /**
    * 创建一个唯一的token， 由于有可能会在之前已经具有了相同的token了
    * 所以采用了递归的方法，来创建一个完全不存在的token 小小的使用了一下递归方法，
    * @param number
